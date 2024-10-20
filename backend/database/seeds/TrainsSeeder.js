@@ -1,7 +1,7 @@
 import Seeder from './Seeder';
 
-const rand = ( min, max ) => Math.round(
-  Math.random() * ( max - min ) + min
+const rand = (min, max) => Math.round(
+  Math.random() * (max - min) + min
 );
 
 class TrainsSeeder extends Seeder {
@@ -10,42 +10,52 @@ class TrainsSeeder extends Seeder {
 
   generateName() {
     const names = [
-        'Ласточка',
-        'Перун',
-        'Зевс',
-        'Иволга',
-        'Калина',
-        'Брусника',
-        'Транзит',
-        'Тройка',
-        'Ураган'
-      ],
-      index = rand( 0, names.length );
-
-    return names[ index ] + ' - ' + rand( 0, 100 );
+      'Ласточка',
+      'Перун',
+      'Зевс',
+      'Иволга',
+      'Калина',
+      'Брусника',
+      'Транзит',
+      'Тройка',
+      'Ураган'
+    ];
+    
+    const index = rand(0, names.length - 1); 
+    return names[index] + ' - ' + rand(0, 100);
   }
+
   async run() {
-    const { db } = this,
-      Train = db.collections.train,
-      Coach = db.collections.coach,
-      { MAX_COACHES, MAX_TRAINS } = this.constructor;
-    await Train.destroy({});
-    for ( let i = 0; i < MAX_TRAINS; i++ ) {
-      const attributes = {
+    try {
+      const { db } = this,
+        Train = db.collections.train,
+        Coach = db.collections.coach,
+        { MAX_COACHES, MAX_TRAINS } = this.constructor;
+
+      await Train.destroy({});
+      
+      for (let i = 0; i < MAX_TRAINS; i++) {
+        const attributes = {
           name: this.generateName(),
           have_coaches: true
-        },
-        limit = rand( 1, MAX_COACHES ),
-        coaches = await Coach.find({
+        };
+        
+        const limit = rand(1, MAX_COACHES);
+        const coaches = await Coach.find({
           where: {
             train: null
           }
-        }).limit( limit ),
-        train = await Train.create( attributes ).fetch();
-      for ( let j = 0, len = coaches.length; j < len; j++ ) {
-        const { _id } = coaches[ j ];
-        await Coach.update({ _id }).set({ train: train._id });
+        }).limit(limit);
+        
+        const train = await Train.create(attributes).fetch();
+        
+        for (let j = 0; j < coaches.length; j++) {
+          const { _id } = coaches[j];
+          await Coach.update({ _id }).set({ train: train._id });
+        }
       }
+    } catch (error) {
+      console.error('Ошибка при выполнении сидера:', error);
     }
   }
 }

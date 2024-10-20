@@ -1,8 +1,12 @@
 'use strict';
 
 import config from './config.js';
-import App from './components/App';
+import App from './components/App.js'; 
 
-const app = new App( config );
+const app = new App(config);
 
-app.run();
+try {
+  app.run();
+} catch (error) {
+  console.error('Ошибка при запуске приложения:', error);
+}

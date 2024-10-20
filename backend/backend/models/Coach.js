@@ -2,17 +2,18 @@ import Waterline from 'waterline';
 
 const Coach = Waterline.Collection.extend({
   identity: 'coach',
-  datastore: 'default',
+  datastore: 'default', 
   primaryKey: '_id',
   attributes: {
     _id: {
-      type: 'string'
+      type: 'string' 
     },
     name: {
-      type: 'string'
+      type: 'string',
+      required: true 
     },
     train: {
-      model: 'train'
+      model: 'train' 
     },
     class_type: {
       type: 'string'
@@ -49,4 +50,5 @@ const Coach = Waterline.Collection.extend({
     }
   }
 });
+
 export default Coach;

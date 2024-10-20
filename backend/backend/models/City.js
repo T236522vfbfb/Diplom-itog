@@ -2,19 +2,21 @@ import Waterline from 'waterline';
 
 const City = Waterline.Collection.extend({
   identity: 'city',
-  datastore: 'default',
+  datastore: 'default', 
   primaryKey: '_id',
   attributes: {
     _id: {
-      type: 'string'
+      type: 'string' 
     },
     name: {
-      type: 'string'
+      type: 'string',
+      required: true 
     },
     railway_stations: {
-      collection: 'railwaystation',
+      collection: 'railwaystation', 
       via: 'city'
     }
   }
 });
+
 export default City;

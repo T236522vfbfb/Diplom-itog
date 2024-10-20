@@ -1,23 +1,27 @@
 class Controller {
-  constructor( app ) {
+  constructor(app) {
     this.app = app;
   }
-  safeAction( action ) {
-    return ( req, res ) => {
-      const sendError = error => res.send({
-        error: error.message
-      });
+
+  safeAction(action) {
+    return async (req, res) => { 
+      const sendError = error => {
+        if (!res.headersSent) { 
+          res.send({
+            error: error.message
+          });
+        }
+      };
+
       try {
-        action
-          .call( this, req, res )
-          .catch( sendError );
-      } catch ( e ) {
-        sendError( e );
+        await action.call(this, req, res); 
+      } catch (e) {
+        sendError(e);
       }
     };
   }
-  register() {
 
+  register() {
   }
 }
 

@@ -4,15 +4,19 @@ import Seeder from './Seeder';
 
 class CitiesSeeder extends Seeder {
   async run() {
-    const { db } = this,
-      City = db.collections.city,
-      cityNames = uniq( pluck( 'city', data ));
+    try {
+      const { db } = this,
+        City = db.collections.city,
+        cityNames = uniq(pluck('city', data));
 
-    await City.destroy({});
-    for ( let name of cityNames ) {
-      await City.create({
-        name: name.toLowerCase()
-      });
+      await City.destroy({});
+      for (let name of cityNames) {
+        await City.create({
+          name: name.toLowerCase()
+        });
+      }
+    } catch (error) {
+      console.error('Ошибка при выполнении сидера:', error);
     }
   }
 }

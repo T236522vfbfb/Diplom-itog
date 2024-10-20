@@ -1,6 +1,10 @@
 import App from './components/SeedApp';
 import config from '../backend/config';
 
-const app = new App( config );
+const app = new App(config);
 
-app.run();
+try {
+  app.run();
+} catch (error) {
+  console.error('Ошибка при запуске приложения:', error);
+}

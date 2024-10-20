@@ -2,23 +2,23 @@ import Waterline from 'waterline';
 
 const Route = Waterline.Collection.extend({
   identity: 'route',
-  datastore: 'default',
+  datastore: 'default', 
   primaryKey: '_id',
   attributes: {
     _id: {
-      type: 'string'
+      type: 'string' 
     },
     from_city: {
-      model: 'city'
+      model: 'city' 
     },
     to_city: {
-      model: 'city'
+      model: 'city' 
     },
     from_railway_station: {
-      model: 'railwaystation'
+      model: 'railwaystation' 
     },
     to_railway_station: {
-      model: 'railwaystation'
+      model: 'railwaystation' 
     },
     date_depart: {
       type: 'number'
@@ -27,7 +27,7 @@ const Route = Waterline.Collection.extend({
       type: 'number'
     },
     train: {
-      model: 'train'
+      model: 'train' 
     },
     have_first_class: {
       type: 'boolean'
@@ -66,9 +66,10 @@ const Route = Waterline.Collection.extend({
       type: 'json'
     },
     bought_seats: {
-      collection: 'seat',
+      collection: 'seat', 
       via: 'route'
     }
   }
 });
+
 export default Route;

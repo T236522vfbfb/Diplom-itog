@@ -2,20 +2,20 @@ import Waterline from 'waterline';
 
 const Seat = Waterline.Collection.extend({
   identity: 'seat',
-  datastore: 'default',
+  datastore: 'default', 
   primaryKey: '_id',
   attributes: {
     _id: {
-      type: 'string'
+      type: 'string' 
     },
     train: {
-      model: 'train'
+      model: 'train' 
     },
     coach: {
-      model: 'coach'
+      model: 'coach' 
     },
     route: {
-      model: 'route'
+      model: 'route' 
     },
     index: {
       type: 'number'
@@ -37,4 +37,5 @@ const Seat = Waterline.Collection.extend({
     }
   }
 });
+
 export default Seat;

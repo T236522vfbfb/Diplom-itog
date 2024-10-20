@@ -13,5 +13,5 @@ module.exports = {
       }
     }
   },
-  cors: require( './config/cors' )
+  cors: require('./config/cors') 
 };
