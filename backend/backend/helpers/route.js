@@ -22,43 +22,45 @@ const boolProps = [
   isNotNil = compose( not, isNil ),
   omitEmptyBoolProps = compose( pickBy( isNotNil ), getBoolProps );
 
-export const toRoute = item => {
-  const omitProps = [
-      'date_depart',
-      'date_arrival',
-      'from_city',
-      'train',
-      'to_city',
-      'price_info',
-      'from_railway_station',
-      'to_railway_station'
-    ],
-    { price_info: priceInfo } = item;
-  return {
-    ...omit( omitProps, item ),
-    train: omit([ 'have_coaches' ], item.train ),
-    from: {
-      railway_station_name: item.from_railway_station.name,
-      city: item.from_city,
-      datetime: item.date_depart
-    },
-    to: {
-      railway_station_name: item.to_railway_station.name,
-      city: item.to_city,
-      datetime: item.date_arrival
-    },
-    price_info: Object.entries( priceInfo ).reduce(
-      ( target, [ prop, value ]) => {
-        if ( value !== false ) {
-          target[ prop ] = value;
-        }
-        return target;
+  export const toRoute = item => {
+    const omitProps = [
+        'date_depart',
+        'date_arrival',
+        'from_city',
+        'train',
+        'to_city',
+        'price_info',
+        'from_railway_station',
+        'to_railway_station'
+      ],
+      { price_info: priceInfo = {} } = item; /
+  
+    return {
+      ...omit(omitProps, item),
+      train: omit(['have_coaches'], item.train || {}), 
+      from: {
+        railway_station_name: item.from_railway_station?.name || '', 
+        city: item.from_city,
+        datetime: item.date_depart
       },
-      {}
-    )
+      to: {
+        railway_station_name: item.to_railway_station?.name || '', 
+        city: item.to_city,
+        datetime: item.date_arrival
+      },
+      price_info: Object.entries(priceInfo).reduce(
+        (target, [prop, value]) => {
+          if (value !== false) {
+            target[prop] = value;
+          }
+          return target;
+        },
+        {}
+      )
+    };
   };
-};
 
+  
 export const toRouteItems = ( fromData, toData = []) => {
   if ( fromData.length === 0 ) {
     return [];
@@ -152,8 +154,8 @@ export const getSortAttribute = value => {
 
 export const toAvailableSeats = boughtSeats => coach => {
   const eqCoach = eq( coach._id ),
-    boughtCoachSeats = boughtSeats
-      .filter(({ coach }) => eqCoach( coach )),
+  boughtCoachSeats = boughtSeats
+        .filter(({ coach }) => eqCoach(coach)),
     seats = range( 0, coach.available_seats )
       .map( position => {
         const index = inc( position ),
