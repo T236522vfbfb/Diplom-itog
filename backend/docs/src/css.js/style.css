@@ -1,0 +1,137 @@
+element.style {
+
+}
+
+.logo {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 900;
+    padding: 10px 0;
+}
+
+.wrapped {
+    padding-left: 240px;
+    padding-right: 240px;
+}
+
+.header__nav-menu {
+    background-color: #292929;
+    padding: 15px 0;
+}
+
+*, ::after, ::before {
+box-sizing: inherit;
+}
+meta {
+    display: none;
+}
+button, html, input, select, textarea {
+    font-family: sans-serif;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #fff;
+    color: #000;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    font-family: Roboto;
+    margin: 0;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.header_variant-1 {
+    background-image: url(/railway-booking-frontend/static/media/header-image.23031b7e138a52623dff.png);
+}
+
+.header {
+    background-color: #ffa800;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display: block;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    font-family: Roboto;
+    margin: 0;
+}
+
+button, html, input, select, textarea {
+    font-family: sans-serif;
+}
+
+.header__ticket-search-section_variant-1 {
+    margin-top: 250px;
+}
+
+.header__ticket-search-section {
+    display: flex;
+    justify-content: center;
+}
+
+.slogan {
+    margin: 0 10px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+
+.ticket-search-form {
+    background-color: rgba(0,0,0,.494);
+    padding: 0 20px 50px;
+}
+
+main {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.loading-bar {
+    background-color: #ffa800;
+    height: 8px;
+    width: 100%;
+}
+
+.about {
+    margin: 140px 0;
+}
+
+.how-it-works {
+    background-color: #ffa800;
+    background-image: url(/railway-booking-frontend/static/media/howworksimage.98ade8c980a7cd2e506a.png);
+    background-size: cover;
+}
+
+.reviews {
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.footer {
+    background-color: #2d2b2f;
+}
