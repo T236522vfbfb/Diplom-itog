@@ -55,7 +55,6 @@ box-sizing: inherit;
 meta {
     display: none;
 }
-
 button, html, input, select, textarea {
     font-family: sans-serif;
 }
