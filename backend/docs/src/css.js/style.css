@@ -2,6 +2,35 @@ element.style {
 
 }
 
+title {
+    display: none;
+}
+
+link {
+    display: none;
+}
+
+head {
+    display: none;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    font-family: Roboto;
+    margin: 0;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.header_variant-1 {
+    background-image: url(/railway-booking-frontend/static/media/header-image.23031b7e138a52623dff.png);
+}
+
 .logo {
     color: #fff;
     font-size: 36px;
@@ -22,9 +51,11 @@ element.style {
 *, ::after, ::before {
 box-sizing: inherit;
 }
+
 meta {
     display: none;
 }
+
 button, html, input, select, textarea {
     font-family: sans-serif;
 }
@@ -38,22 +69,6 @@ html {
 
 *, :after, :before {
     box-sizing: inherit;
-}
-
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    box-sizing: border-box;
-    font-family: Roboto;
-    margin: 0;
-}
-
-div {
-    display: block;
-    unicode-bidi: isolate;
-}
-.header_variant-1 {
-    background-image: url(/railway-booking-frontend/static/media/header-image.23031b7e138a52623dff.png);
 }
 
 .header {
