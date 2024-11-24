@@ -1,0 +1,404 @@
+head {
+	display: none;
+}
+
+@font-face {
+	font-family: "Roboto-Regular";
+	src: url("../fonts/Roboto\ font/Roboto-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Roboto-Light";
+	src: url("../fonts/Roboto\ font/Roboto-Light.ttf");
+}
+
+body {
+	box-sizing: border-box;
+	font-family: "Roboto-Regular";
+	margin: 0;
+}
+
+nav {
+	background: #292929;
+}
+
+.name {
+	font-family: "Roboto-Light";
+	list-style: none;
+	margin-right: 30px;
+	line-height: 80px;
+	font-size: 25px;
+}
+
+.container {
+	max-width: 1000px;
+	margin: auto;
+}
+
+.header {
+	display: flex;
+	width: 100%;
+}
+
+.header-logo {
+	background-color: rgb(0, 0, 0, 0.6);
+	height: 50px;
+	color: #e5e5e5;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 50px;
+}
+
+.header-menu {
+	color: #ffffff;
+	display: flex;
+}
+
+.stylesheet {
+	background-image: url(../img/image.svg);
+	background-size: cover;
+}
+
+.item {
+	margin-top: 300px;
+	margin-left: 200px;
+}
+
+.header-widget {
+	align-items: center;
+	justify-content: center;
+	padding-top: 100px;
+	padding: 50px;
+	margin: 30px;
+	border: 1000px;
+}
+
+.header-widget .container {
+	display: flex;
+}
+.header-title-wrapper {
+	width: 700px;
+	flex: 1 1;
+	display: block;
+}
+
+.header-title {
+	font-family: "Roboto-Light";
+	color: #ffffff;
+	font-size: 72px;
+	font-weight: 100;
+	margin: 0;
+	text-align: left;
+	width: min-content;
+}
+
+.header-title_mod {
+	color: #ffffff;
+	font-weight: 700;
+}
+
+h1 {
+	padding: 0;
+	width: 100%;
+}
+
+.header-search {
+	height: 56.5rem;
+	max-width: 73rem;
+	min-width: 73rem;
+}
+
+*,
+*/*/:after,
+:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}*/
+
+.header-title-wrapper .search-widget {
+	justify-content: space-between;
+}
+
+.section {
+	display: block;
+	margin-left: 700px;
+}
+
+.search-widget {
+	background-color: #292929cc;
+	width: auto;
+	padding: 70px;
+	display: block;
+}
+
+.search-widget_form {
+	margin: 50px;
+	padding: auto;
+}
+
+.form_fieldset {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+
+fieldset {
+	margin: 0;
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+.date-search-form {
+	margin: 70px;
+	padding: 0;
+}
+
+.fieldset-direction {
+}
+
+.form_fieldset_header {
+}
+
+.form {
+	display: block;
+	margin-top: 0;
+	unicode-bidi: isolate;
+}
+
+.fieldset {
+	margin: 0;
+}
+
+.header-progress {
+	background-color: #292929;
+	height: 8px;
+	position: relative;
+	width: 100%;
+}
+.progress-bar {
+	animation: progress;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	background-color: var(--color-orange);
+	border: none;
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 1%;
+}
+.about {
+	background-color: var(--color-white);
+	margin: 0 auto;
+	width: 100%;
+	display: block;
+}
+
+.about_title {
+	font-size: 36px;
+	font-weight: 500;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+
+.about__content {
+	font-size: 24px;
+	font-weight: 400;
+	position: relative;
+}
+
+.about__content:before {
+	border-left: 9px solid var(--color-orange);
+	content: "";
+	height: 100%;
+	position: absolute;
+}
+
+.p {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	unicode-bidi: isolate;
+}
+
+.about_paragraph {
+	margin-left: 30px;
+	padding: 10px 0;
+}
+
+.wrap {
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+.work__list {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+:root {
+	--font-family: "Roboto", sans-serif;
+	--color-main-light: #fff;
+	--color-secondary-light: #e5e5e5;
+	--color-tertiarly-light: #f7f5f9;
+	--color-quaterniary-light: #e4e0e9;
+	--color-quinary-light: #f7f6f6;
+	--color-senary-light: #f9f9f9;
+	--color-main-dark: #292929;
+	--color-secondary-dark: #2d2b2f;
+	--color-hover: #ffca62;
+	--color-bars: #3e3c41;
+	--color-bars-light: #c4c4c4;
+	--color-black: #000;
+	--color-yellow-orange: #ffa800;
+	--color-grey: #928f94;
+	--color-light-grey: #f4f3f6;
+	--color-popover: #f5f4f6;
+	--color-tickets: #ffd98f;
+	--color-error: rgba(255, 61, 0, 0.38);
+	--color-error-light: hsla(9, 87%, 69%, 0.892);
+	--color-info: rgba(255, 245, 0, 0.36);
+	--color-bg-calendar: rgba(255, 168, 0, 0.31);
+	--color-search-block: rgba(41, 41, 41, 0.8);
+	--border-shadow-last-ticket: 0px 0.2rem 0.2rem rgba(62, 60, 65, 0.25);
+	--border-shadow-trains-card: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+	--box-shadow-popover: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+	--box-shadow-selection-block: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
+	--filter: drop-shadow(var(--box-shadow-popover));
+	--fw-1: 100;
+	--fw-3: 300;
+	--fw-4: 400;
+	--fw-5: 500;
+	--fw-7: 700;
+	--fw-9: 900;
+	--fs-16: 1.6rem;
+	--fs-18: 1.8rem;
+	--fs-20: 2rem;
+	--fs-21: 2.1rem;
+	--fs-24: 2.4rem;
+	--fs-30: 3rem;
+	--fs-36: 3.6rem;
+	--fs-42: 4.2rem;
+	--fs-48: 4.8rem;
+	--fs-52: 5.2rem;
+	--fs-72: 7.2rem;
+	--fh-19: 1.9rem;
+	--fh-21: 2.1rem;
+	--fh-23: 2.3rem;
+	--fh-25: 2.5rem;
+	--fh-28: 2.8rem;
+	--fh-35: 3.5rem;
+	--fh-42: 4.2rem;
+	--fh-45: 4.5rem;
+	--fh-50: 5rem;
+	--fh-55: 5.5rem;
+	--fh-84: 8.4rem;
+}
+
+link {
+	display: none;
+}
+
+div {
+	display: block;
+	unicode-bidi: isolate;
+}
+
+.header__nav-menu {
+	background-color: #292929;
+	padding: 15px 0;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	background: #fff;
+	color: #000;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+	display: block;
+}
+
+*,
+:after,
+:before {
+	box-sizing: inherit;
+}
+
+button,
+html,
+input,
+select,
+textarea {
+	font-family: sans-serif;
+}
+
+.header__ticket-search-section_variant-1 {
+	margin-top: 250px;
+}
+
+.header__ticket-search-section {
+	display: flex;
+	justify-content: center;
+}
+
+.slogan {
+	margin: 0 10px;
+}
+
+.ticket-search-form {
+	background-color: rgba(0, 0, 0, 0.494);
+	padding: 0 20px 50px;
+}
+
+.main {
+	background-color: var(--color-white);
+	margin: 0 auto;
+	width: 100%;
+}
+
+main {
+	display: block;
+	unicode-bidi: isolate;
+}
+
+.loading-bar {
+	background-color: #ffa800;
+	height: 8px;
+	width: 100%;
+}
+
+.how-it-works {
+	background-color: #ffa800;
+	background-image: url(/railway-booking-frontend/static/media/howworksimage.98ade8c980a7cd2e506a.png);
+	background-size: cover;
+}
+
+.reviews {
+	padding-bottom: 100px;
+	padding-top: 100px;
+}
+
+.footer {
+	background-color: #2d2b2f;
+}

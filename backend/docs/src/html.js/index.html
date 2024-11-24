@@ -1,151 +1,308 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Система бронирования ж/д билетов</title>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+		rel="stylesheet"
+	/>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Система бронирования ж/д билетов</title>
 
-    <link rel="stylesheet" href="../css.js/style.css">
-</head>
-<body>
-    
-    <header>
-        <div class="wrap">
-            <div class="header-logo">Logo</div>
-        </div>
-        <div class="header-menu">
-            <div class="wrap">
-                <nav>
-                    <ul>
-                        <li>О нас</li>
-                        <li>Как это работает</li>
-                        <li>Отзывы</li>
-                        <li>Контакты</li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+		<link rel="stylesheet" href="../css.js/style.css" />
+	</head>
+	<body>
+		<section class="arial">
+			<!--Лого полоска с логотипом-->
+			<section class="logo-wrapper">
+				<div class="container">
+					<a class="header-logo">Лого</a>
+				</div>
+			</section>
+			<!--конец полоски с логотипом-->
+			<nav>
+				<div class="container">
+					<ul class="header-menu">
+						<li class="name">О нас</li>
+						<li class="name">Как это работает</li>
+						<li class="name">Отзывы</li>
+						<li class="name">Контакты</li>
+					</ul>
+				</div>
+			</nav>
 
-    <section class="header">
-        <div class="wrap">
-            <h1>Вся жизнь - путешествие!</h1>
-            <div class="header-search">
-                <div>
-                    <p>Направление</p>
-                    <input type="text" id="search-from">
-                </div>
-                <div>
-                    <input type="text" id="search-to">
-                </div>
-                <div>
-                    <p>Дата</p>
-                    <input type="text" id="search-date-from">
-                </div>
-                <div>
-                    <input type="text" id="search-date-to">
-                </div>
-                <div>
-                    <button class="btn-1 btn-text-black btn-bg-orange">найти билеты</button>
-                </div>
-            </div>
-        </div>
-    </section>
+			<div class="header-widget container">
+				<!-- вся жизнь путешествие-->
+				<div class="header-title-wrapper">
+					<h1 class="header-title">
+						Вся жизнь - <br />
+						<span class="header-title_mod">путешествие!</span>
+					</h1>
+				</div>
+				<!--конец жизни путешествий-->
 
-    <section class="about">
-        <div class="wrap">
-            <h2>о нас</h2>
-            <div class="about-callout">
-                <p>Мы рады видеть вас! Мы рботаем для Вас с 2003 года. 14 лет мы наблюдаем, как с каждым днем все больше людей заказывают жд билеты через интернет.</p>
-                <p>Сегодня можно заказать железнодорожные билеты онлайн всего в 2 клика, но стоит ли это делать? Мы расскажем о преимуществах заказа через интернет.</p>
-                <p>Покупать жд билеты дешево можно за 90 суток до отправления поезда. Благодаря динамическому ценообразованию цена на билеты в это время самая низкая.</p>
-            </div>
-        </div>
-    </section>
+				<!--квадрат черный-->
 
-    <section class="learn">
-        <div class="wrap">
-            <h2>Как это работает</h2>
-            <a href="#" class="btn-2 btn-text-white">Узнать больше</a>
-            <div class="learn-wrap">
-                <div class="learn-item">
-                    <img src="../icons/learn-icon-1.svg" alt="">
-                    <p>Удобный заказ на сайте</p>
-                </div>
-                <div class="learn-item">
-                    <img src="../icons/learn-icon-2.svg" alt="">
-                    <p>Нет необходимости ехать в офис</p>
-                </div>
-                <div class="learn-item">
-                    <img src="../icons/learn-icon-3.svg" alt="">
-                    <p>Огромный выбор направлений</p>
-                </div>
-            </div>
-        </div>
-    </section>
+				<form class="search-widget_form">
+					<div class="colums from-to">
+						<!--кол 1-->
+						<div>
+							<fieldset class="form_fieldset fieldset-direction">
+								<div>
+									<label for="search-to" class="form_fieldset__header"
+										>Направление</label
+									>
 
-    <section class="reviews">
-        <div class="wrap">
-            <h2>отзывы</h2>
+									<!--<div class="fieldset-direction">
+											<div class="search">
+		
+										<input
+													type="text"
+													id="search-from"
+													placeholder="Введите направление"
+												/>
+		
+											</div>
+										</div>-->
+								</div>
+								<div>
+									<input
+										class="input-place"
+										type="text"
+										id="search-to"
+										placeholder="Куда"
+									/>
+								</div>
+							</fieldset>
+						</div>
+						<!--кол 2-->
+						<div>
+							<img src="../icons/cerkle.svg" alt="" />
+						</div>
+						<!--кол 3-->
+						<div>
+							<div>
+								<input
+									class="input-place"
+									type="text"
+									id="search-from-location"
+									placeholder="Откуда"
+								/>
+							</div>
+						</div>
+					</div>
+					<!--кол 1-->
+					<div class="colums departure-date">
+						<div>
+							<label for="search-date-from" class="date-lable">Дата</label>
+							<input
+								class="calendar-search"
+								type="text"
+								id="search-date-from"
+								placeholder="ДД/ММ/ГГ"
+							/>
+						</div>
+						<div>
+							<input
+								class="calendar-search"
+								type="text"
+								id="search-date-to"
+								placeholder="ДД/ММ/ГГ"
+							/>
+						</div>
+					</div>
+					<div class="found-tickets">
+						<button type="submit" class="btn-1">НАЙТИ БИЛЕТЫ</button>
+					</div>
+				</form>
 
-            <div class="reviews-wrap">
+				<!--конец черного квадрата-->	
+			</div>
+			<div class="header-separator">
+			<section class="header-strip">
+				<span class="strip-bar" value="50" max="100"></span>
+			</section>
+		</section>
+</div>
 
-                <div class="reviews-item">
-                    <img src="" alt="">
-                    <div>
-                        <h3>Екатерина Вальнова</h3>
-                        <p><span>“</span>Доброжелательные подсказки на всех этапах помогут правильно заполнить поля и без затруднений купить авиа или ж/д билет, даже если вы заказываете онлайн билет впервые.<span>”</span></p>
-                    </div>
-                </div>
+		<main class="main">
+			<div class="main_about-us" id="about">
+				<div class="container">
+					<h2 class="about_title">О нас</h2>
+					<div class="about_content">	
+						<div class="about-content">
+							<p class="about_paragraph">
+								Мы рады видеть вас! Мы работаем для вас с 2003 года. 14 лет мы
+								наблюдаем, как с каждым днем все больше людей заказывают жд
+								билеты через интернет.
+							</p>
+							<p class="about_paragraph">
+								Сегодня можно заказать железнодорожные билеты онлайн всего в 2
+								клика, но стоит ли это делать? Мы расскажем о преимуществах
+								заказа через интернет.
+							</p>
+							<p class="about_paragraph">
+								Покупать жд билеты дешево можно за 90 суток до отправления
+								поезда. Благодаря динамическому ценообразованию цена на билеты в
+								это время самая низкая.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 
-                <div class="reviews-item">
-                    <img src="" alt="">
-                    <h3>Евгений Стрыкало</h3>
-                    <p><span>“</span><span>СМС-сопровождение до посадки</span><span>Сразу после оплаты ж/д билетов </span><span>и за 3 часа до отправления мы пришлем вам СМС-напоминание о поездке.</span><span>”</span></p>
-                </div>
+		<section class="work">
+			<div class="container">
+				<div class="main-work">
+					<h2 class="title-work">Как это работает</h2>
+					<a href="#" class="btn-2 btn-text-white">Узнать больше</a>
+				</div>
+				<div class="work-list">
+					<div class="list-item">
+						<img src="../icons/list-icon-1.svg" alt="" />
+						<p>Удобный заказ на сайте</p>
+					</div>
+					<div class="list-item">
+						<img src="../icons/list-icon-2.svg" alt="" />
+						<p>Нет необходимости ехать в офис</p>
+					</div>
+					<div class="list-item">
+						<img src="../icons/list-icon-3.svg" alt="" />
+						<p>Огромный выбор направлений</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-            </div>
-            
-            <div class="reviews-btns">
-                <div class="reviews-btns_active"></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </section>
+		<main class="feedback-reviews">
+			<div class="container">
+				<div class="post-reviews">
+               <p class="reviews-title">ОТЗЫВЫ</p>
+			   		
+				<div class="feedback-container">
 
-    <footer>
-        <div class="wrap footer-wrap">
-            <div>
-                <h3>Свяжитесь с нами</h3>
-                <p><img src="../icons/Footer phone.svg" alt="">8 (800) 000 00 00</p>
-                <p><img src="../icons/footer-mail.svg" alt="">inbox@mail.ru</p>
-                <p><img src="../icons/footer-skype.svg" alt="">tu.train.tickets</p>
-                <p><img src="../icons/footer-Vector.svg" alt="">г. Москва ул. Московская 27-35 555 555</p>
-            </div>
-            <div>
-                <h3>Подписка</h3>
-                <p>Будьте в курсе событий</p>
-                <input type="text" placeholder="e-mail">
-                <button>отправить</button>
-                <h3>Подписывайтесь на нас</h3>
-                <div class="social-wrap">
-                    <a href="#"><img src="../icons/footer-youtube.svg" alt=""></a>
-                    <a href="#"><img src="../icons/footer-in.svg" alt=""></a>
-                    <a href="#"><img src="../icons/footer-G.svg" alt=""></a>
-                    <a href="#"><img src="../icons/footer-F.svg" alt=""></a>
-                    <a href="#"><img src="../icons/footer-Twit.svg" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="wrap">
-            <div class="footer-logo">Logo</div>
-            <div class="footer-arrow"><img src="../icons/footer-arrow.svg" alt=""></div>
-            <div>2024 WEB</div>
-        </div>
-    </footer>
+					<div class="feedback-author-content">
+					<div class="reviews-item">    						
+						<img src="../icons/Katay.svg" alt="Фото Екатерины Вальновой" />
+						<div>
+							<h3 class="author-name">Екатерина Вальнова</h3>
+							<p class="author-text">
+								“Доброжелательные подсказки на всех этапах помогут правильно заполнить поля и без затруднений купить авиа или ж/д билет, даже если вы заказываете онлайн билет впервые.”
+							</p>
+						</div>
+					</div>
+		
+					<div class="reviews-item">
+						<img src="../icons/Evgenii.svg" alt="Фото Евгения Стрыкало" />
+						<div>
+							<h3 class="author-name">Евгений Стрыкало</h3>
+							<p class="author-text">
+								“СМС-сопровождение до посадки. Сразу после оплаты ж/д билетов и за 3 часа до отправления мы пришлем вам СМС-напоминание о поездке.”
+							</p>
+						</div>
+					</div>
 
-</body>
+				</div>
+
+				</div>
+			</div>
+			<div class="reviews-btns">
+				<div class="reviews-btns_active"></div>
+				<p><img src="../icons/tochki.svg" alt=""></p>
+			</div>
+			</div>
+		</main>
+
+
+				
+			</div>
+	
+			
+
+		<footer class="footer" id="footer-contact">
+			<div class="container footer-container">
+					<div class="footer-contact contact">  
+                    <p class="сontact-title">Свяжитесь с нами</p>
+					<ul class="contact-list">
+						<li class="contact-item">						
+						<a class="contact-link" href="tel:8 (800) 000 00 00" target="_blank">
+							<img src="../icons/Footer phone.svg" alt="Телефон" class="contact-image"/>
+                           <p class="contact-desk">8 (800) 000 00 00</p>
+						</a>
+                         </li>
+							<li class="contact-item">
+								<a class="contact-link" href="mailto:inbox@mail.ru" target="_blank">
+                               <img src="../icons/footer-mail.svg" alt="Email" class="contact-image"/>
+                                <p class="contact-desk">inbox@mail.ru</p>
+								</a>
+						        </li>
+<li class="contact-item">
+	<a class="contact-link" href="Skype" target="_blank">
+<img src="../icons/footer-skype.svg" alt="Skype" class="contact-image"/>
+<p class="contact-desk">tu.train.tickets</p>
+	</a>
+</li>
+
+<li class="contact-item">
+	<div class="contact-link">
+		<img src="../icons/footer-Vector.svg" style="margin-right: 10px;" alt="Адрес на карте" class="contact-image"/>
+		<p class="contact-desk">г. Москва <br>ул. Московская <br>27-35 555 555</p>
+	</div>
+</li>
+					</ul>					
+					</div>
+					
+					
+				<div class="footer-subscribe_col2">
+					<div class="footer-subscribe">
+						<p class="subscribe-title">Подписка</p>
+						<p class="subscribe-subtitle">Будьте в курсе событий</p>
+						<input type="text" placeholder="e-mail" />
+						<button type="submit">ОТПРАВИТЬ</button>
+					</div>
+		
+					<div class="social-media-communication">
+						<p class="subscribe-title">Подписывайтесь на нас</p>
+						<ul class="media-social-link">
+							<li class="subscribe-social-item">
+								<a class="social-link" href="https://www.youtube.com"><img src="../icons/footer-youtube.svg" alt="YouTube" /></a>	
+							</li>
+							<li class="subscribe-social-item">
+							<a class="social-link" href="https://www.linkedin.com"><img src="../icons/footer-in.svg" alt="LinkedIn" /></a>
+							</li>
+								<li class="subscribe-social-item">
+									<a class="social-link" href="https://www.google.com"><img src="../icons/footer-G.svg" alt="Google+" /></a>
+									</li>
+										<li class="subscribe-social-item">
+										<a class="social-link" href="https://www.facebook.com"><img src="../icons/footer-F.svg" alt="Facebook" /></a>
+											</li>
+												<li class="subscribe-social-item">
+												<a class="social-link" href="https://twitter.com"><img src="../icons/footer-Twit.svg" alt="Twitter" /></a>
+												</li>						
+						</ul>
+					</div>
+				</div>
+                                               </div>
+			
+			<div class="decorate-line">
+				<section class="line">
+					<span class="strip-bar"></span>
+				</section>
+				
+				<div class="container">
+					<div class="footer-copyright">
+						<div class="container-copyright">			
+							<a class="copyright-logo-link" href="">Лого</a>
+							
+							<button class="copyright-btn" type="button"><img src="../icons/footer-arrow.svg" alt="Стрелка" /></button>
+								
+							<p class="copyright-info">2024 WEB</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+	</body>
 </html>
