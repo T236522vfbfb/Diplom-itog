@@ -1,9 +1,3 @@
-import { useState } from 'react'
-
-import relca from './assets/icons/relca.png';
-import Groupe from './assets/icons/Groupe.svg';
-import Vector from './assets/icons/Vector.svg';
-
 import HeaderIndex from './components/HeaderIndex';
 import Aboutindex from './components/Aboutindex';
 import HowItWorks from './components/HowItWorks';
