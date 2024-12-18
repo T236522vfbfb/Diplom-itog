@@ -1,14 +1,16 @@
-import listicon1 from '../assets/icons/listicon-1.svg';
-import listicon2 from '../assets/icons/listicon-2.svg';
-import listicon3 from '../assets/icons/listicon-3.svg';
+import listicon1 from "../assets/icons/listicon-1.svg";
+import listicon2 from "../assets/icons/listicon-2.svg";
+import listicon3 from "../assets/icons/listicon-3.svg";
 
 const HowItWorks = () => {
-    return (   
-        	<section className="work">
+	return (
+		<section className="work">
 			<div className="container">
 				<div className="main-work">
 					<h2 className="title-work">Как это работает</h2>
-					<a href="#" className="btn-2 btn-text-white">Узнать больше</a>
+					<a href="#" className="btn-2 btn-text-white">
+						Узнать больше
+					</a>
 				</div>
 				<div className="work-list">
 					<div className="list-item">
@@ -25,8 +27,8 @@ const HowItWorks = () => {
 					</div>
 				</div>
 			</div>
-		</section>     
-    )
-  }
-  
-  export default HowItWorks
+		</section>
+	);
+};
+
+export default HowItWorks;

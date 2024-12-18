@@ -1,10 +1,10 @@
 const Aboutindex = () => {
-    return (
-        <main className="main">
+	return (
+		<main className="main">
 			<div className="main_about-us" id="about">
 				<div className="container">
 					<h2 className="about_title">О нас</h2>
-					<div className="about_content">	
+					<div className="about_content">
 						<div className="about-content">
 							<p className="about_paragraph">
 								Мы рады видеть вас! Мы работаем для вас с 2003 года. 14 лет мы
@@ -25,12 +25,8 @@ const Aboutindex = () => {
 					</div>
 				</div>
 			</div>
-		</main>  
-    )
-  }
-  
-  export default Aboutindex
+		</main>
+	);
+};
 
-
-
-
+export default Aboutindex;
