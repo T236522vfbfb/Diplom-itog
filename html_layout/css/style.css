@@ -686,10 +686,22 @@ p:last-of-type {
 	font-size: 24px;
 }
 
-
-
 /****************************** 
 
 	страница выбора поезда
 
 ******************************/
+.search-widget {
+	display: flex;
+	background-color: #292929cc;
+	margin: 110px auto 0;
+	max-width: 1490px;
+	padding: 30px 40px 70px;
+	width: 100%;
+}
+
+.search-widget__form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 45px 35px;
+}
