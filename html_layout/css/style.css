@@ -1563,8 +1563,13 @@ input {
 }
 
 .train-selection {
+	display: flex;
 	width: 469px;
 	border-right: 1px dashed #e5e5e5;
+}
+
+.number-train-selection {
+	display: inline;
 }
 
 .train-selection-route {
