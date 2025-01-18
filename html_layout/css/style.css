@@ -1418,7 +1418,7 @@ svg {
 	text-align: end;
 }
 .ticket-item__cost-value {
-	color: var(--color-orange);
+	color: var(--color-yellow-orange);
 	font-size: 36px;
 	font-weight: 700;
 	margin: 0 10px;
