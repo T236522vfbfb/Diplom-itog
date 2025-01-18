@@ -1924,120 +1924,302 @@ input {
 	border-bottom: 1px dashed #c4c4c4;
 }
 .amount__tickets-title {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 35px;
-    color: #292929;
-    margin: 0 auto 15px 20px;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 35px;
+	color: #292929;
+	margin: 0 auto 15px 20px;
 }
 
 .tickets__age {
-    display: flex;
+	display: flex;
 }
 .tickets__age-inputs {
-    width: 30%;
-    height: 192px;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	width: 30%;
+	height: 192px;
+	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .tickets__age-input {
-    width: 240px;
-    height: 50px;
-    padding-left: 15px;
-    background: #fff;
-    border: 1px solid #928F94;
-    border-radius: 5px;
-    caret-color: transparent;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    color: #292929;
+	width: 240px;
+	height: 50px;
+	padding-left: 15px;
+	background: #fff;
+	border: 1px solid #928f94;
+	border-radius: 5px;
+	caret-color: transparent;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21px;
+	color: #292929;
 }
 .tickets__adults-description {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    color: #928f94;
-    margin-top: 23px;
-    width: 240px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 19px;
+	color: #928f94;
+	margin-top: 23px;
+	width: 240px;
 }
 .tickets__age-inputs {
-    width: 30%;
-    height: 192px;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	width: 30%;
+	height: 192px;
+	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .tickets__age-input {
-    width: 240px;
-    height: 50px;
-    padding-left: 15px;
-    background: #fff;
-    border: 1px solid #928F94;
-    border-radius: 5px;
-    caret-color: transparent;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    color: #292929;
+	width: 240px;
+	height: 50px;
+	padding-left: 15px;
+	background: #fff;
+	border: 1px solid #928f94;
+	border-radius: 5px;
+	caret-color: transparent;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21px;
+	color: #292929;
 }
 .coach__type-title {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 35px;
-    color: #292929;
-    margin: 27px auto 35px 20px;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 35px;
+	color: #292929;
+	margin: 27px auto 35px 20px;
 }
 .coach__types {
-    display: flex;
+	display: flex;
 }
 
 .coach__type {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 23%;
-    height: 140px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 23%;
+	height: 140px;
 }
 .type__fourth-img {
-    width: 31px;
-    background-image: url(../icons/GroupSeatMan.svg);
+	width: 31px;
+	background-image: url(../icons/GroupSeatMan.svg);
 }
 
-.type__text, .type__text-active {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 28px;
-    color: #292929;
-    margin-top: 20px;
+.type__text,
+.type__text-active {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 28px;
+	color: #292929;
+	margin-top: 20px;
 }
 .type__third-img {
-    width: 50px;
-    background-image: url(../icons/Union.svg);
+	width: 50px;
+	background-image: url(../icons/Union.svg);
 }
 .type__second-img {
-    width: 50px;
-    background-image: url(../icons/Union2.svg);
+	width: 50px;
+	background-image: url(../icons/Union2.svg);
 }
 .type__first-img-active {
-    width: 57px;
-    background-image: url(../icons/Luks.svg);
+	width: 57px;
+	background-image: url(../icons/Luks.svg);
 }
 
 .type__text-active {
-    color: #ffa800;
+	color: #ffa800;
 }
 
 .coaches__numbering {
-    display: flex;
-    background-color: #ffa80070;
-    height: 37px;
+	display: flex;
+	background-color: #ffa80070;
+	height: 37px;
 }
 .coaches__numbers {
-    display: flex;
-    align-items: baseline;
-    margin: auto auto auto 33px;
+	display: flex;
+	align-items: baseline;
+	margin: auto auto auto 33px;
+}
+
+.coaches__numbers-text {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 19px;
+	color: #292929;
+}
+
+.coaches__number-current {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28px;
+	color: #fff;
+	margin-left: 10px;
+}
+.coaches__numbers-text {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 19px;
+	color: #292929;
+}
+
+.coach__description-prices {
+	display: flex;
+	height: 160px;
+	margin-bottom: 100px;
+}
+.coach__number {
+	background-color: #ffa80070;
+	width: 190px;
+}
+.coach__number-title {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 84px;
+	color: #292929;
+	text-align: center;
+	margin-top: 25px;
+}
+.coach__number-text {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 28px;
+	text-align: center;
+	color: #292929;
+}
+.coach__seats-amount,
+.coach__seats-price {
+	margin-top: 33px;
+	margin-left: 40px;
+	width: 21%;
+}
+.seats__amount-title,
+.seats__price-title,
+.coach__services-text {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21px;
+	color: #928f94;
+}
+.seats__amount-num {
+	font-weight: 600;
+	color: #000;
+}
+.seats__amount-text {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 28px;
+	color: #000;
+}
+.sign__rub {
+	width: 22px;
+	height: 22px;
+	background-image: url(../icons/Rub.svg);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	padding-top: 4px;
+}
+.seats__price-text {
+	display: flex;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28px;
+	color: #000;
+}
+.coach__services {
+	margin-top: 33px;
+}
+.coach__services-text {
+	margin-bottom: 20px;
+}
+.coach__services-img {
+	display: flex;
+}
+
+.service__move {
+	position: relative;
+}
+.service__air-selected {
+	background-image: url(../icons/Air.svg);
+}
+.service__wifi-empty {
+	background-image: url(../icons/wifi.svg);
+	cursor: not-allowed;
+	opacity: 0.3;
+}
+
+.service__included {
+	background-color: #ffa800;
+	opacity: 0.5;
+	border: none;
+}
+
+.service__linens {
+	background-image: url(../icons/OrangePolot.svg);
+}
+.service__move {
+	position: relative;
+}
+
+.service__coffee {
+	background-image: url(../icons/OrangeCofe.svg);
+	cursor: not-allowed;
+	opacity: 0.3;
+}
+.coach__seats-selected {
+	width: 200px;
+	height: 72px;
+	background: #f3f3f3;
+	border-radius: 5px;
+	margin-top: 60px;
+	display: flex;
+}
+
+.seats__info-first {
+	background-image: url(../icons/imagetrain.svg);
+}
+
+.seats__info-first,
+.seats__info-second,
+.seats__info-third,
+.seats__info-fourth {
+	display: flex;
+	position: relative;
+	width: 920px;
+	height: 145px;
+	margin: 0 18px 80px;
+}
+.scheme__seats-first,
+.scheme__seats-second,
+.scheme__seats-third,
+.scheme__seats-fourth {
+	position: absolute;
+	width: 89.63px;
+	height: 114px;
+	top: 28px;
+	left: 121px;
+}
+
+.coach__button-disable {
+	background-color: #928f94;
+	cursor: not-allowed;
+}
+.coach__button,
+.coach__button-disable {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 222px;
+	height: 60px;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28px;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #ffa800;
+	border: none;
+	border-radius: 5px;
+	margin: 63px 0 124px auto;
+	cursor: pointer;
 }
