@@ -1531,6 +1531,19 @@ input {
 	background-color: #e4e0e9;
 }
 
+.train__name-image {
+    display: flex;
+    margin-top: 40px;
+    margin-left: 43px;
+    width: 86px;
+    height: 86px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    background-image: url(../icons/Rectangle\ 9.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .train__name-text {
 	font-size: 24px;
 	font-weight: 500;
@@ -1580,10 +1593,7 @@ input {
 	text-transform: capitalize;
 }
 .selection-city {
-	font-size: 18px;
 	font-weight: 400;
-	line-height: 19px;
-	color: #928f94;
 }
 
 .selection-station {
@@ -1610,4 +1620,151 @@ input {
     width: 30px;
     height: 20px;
     background-image: url(../icons/Subtract\ \(1\).svg);
+}
+
+.train__tickets {
+    display: flex;
+    flex-direction: column;
+}
+
+.train__ticket {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 26px;
+    height: 29px;
+}
+
+.train__tickets-options {
+    margin: 43px 22px 27px 27px;
+}
+
+.ticket__class {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #3e3c41;
+}
+
+.amount__seat {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #ffa800;
+    margin-right: 30px;
+    margin-left: auto;
+}
+
+.none {
+    display: none;
+}
+
+.seat__up {
+    display: flex;
+    align-items: baseline;
+    margin: 9px 17px 9px 32px;
+}
+
+.ticket__class {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #3e3c41;
+}
+
+.seat__ticket-start-number {
+    margin-left: auto;
+}
+.sign__rub {
+    width: 22px;
+    height: 22px;
+    background-image: url(../icons/Rub.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    padding-top: 4px;
+}
+
+.seat__up {
+    display: flex;
+    align-items: baseline;
+    margin: 9px 17px 9px 32px;
+}
+
+.ticket__class {
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #3e3c41;
+}
+
+.seat__ticket-start-number {
+    margin-left: auto;
+}
+
+.ticket__start-price {
+    display: flex;
+    align-items: baseline;
+}
+
+.ticket__start-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #928f94;
+}
+
+.ticket__start-number, .seat__ticket-start-number {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #2d2b2f;
+    margin: 0 5px;
+    width: 60px;
+    text-align: center;
+}
+
+.train__facilities {
+    display: flex;
+    justify-content: space-between;
+    width: 92px;
+    height: 20px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 28px;
+}
+
+.train__facilities-wifi {
+    width: 24px;
+    height: 20px;
+    background-image: url(../icons/wifi.svg);
+}
+
+.train__facilities-express {
+    width: 20px;
+    height: 20px;
+    background-image: url(../icons/Exsp.svg);
+}
+
+.facilities__coffee-have {
+    width: 20px;
+    height: 20px;
+    background-image: url(../icons/cofe.svg);
+}
+
+.train__choice-btn {
+    margin: 18px 20px 23px 35px;
+    width: 228px;
+    height: 39px;
+    background-color: #ffa800;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
 }
