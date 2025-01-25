@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Система бронирования ж/д билетов</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <section class="arial">
+        <header class="header-train">
+            <!--Лого полоска с логотипом-->
+            <section class="logo-wrapper">
+                <div class="container">
+                    <a class="header-logo">Лого</a>
+                </div>
+            </section>
+            <!--конец полоски с логотипом-->
+            <nav>
+                <div class="container">
+                    <ul class="header-menu">
+                        <li class="name">О нас</li>
+                        <li class="name">Как это работает</li>
+                        <li class="name">Отзывы</li>
+                        <li class="name">Контакты</li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="search-widget">
+
+                <form class="MainSearch-widget">
+                    <fieldset class="direction">
+                        <legend class="fieldset-legend">Направление</legend>
+
+                        <div class="fieldset__input-wrapper">
+                            <label class="fieldset__label">
+                            </label>
+                            <div>
+                                <div class="ant-select-selector">
+                                    <span class="ant-select-selection-search">
+                                        <input placeholder="Москва" type="search" autocomplete="off"
+                                            class="ant-select-selection-search-input" id="rc_select_2">
+                                    </span>
+                                </div>
+
+                                <div class="city-list">
+                                    <ul>
+                                        <li>Москва</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="fieldset__btn">
+                            <button class="fieldset-direction__btn" type="button"></button>
+                        </div>
+
+                        <div class="fieldset__input-wrapper">
+                            <label for="to" class="fieldset__label">
+                            </label>
+                            <div class="">
+                                <div class="ant-select-selector">
+                                    <span class="ant-select-selection-search">
+                                        <input type="search" autocomplete="off"
+                                            class="ant-select-selection-search-input">
+                                    </span>
+                                </div>
+
+                                <div class="city-list">
+                                    <ul>
+                                        <li>Москва</li>
+                                        <li>САНКТ-ПЕТЕРБУРГ</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset-date">
+                        <legend class="fieldset-legend">Дата</legend>
+                        <div class="fieldset__input-wrapper">
+                            <label class="fieldset__label"></label>
+                            <input placeholder="2024-12-28"
+                                class="ant-select-selection-search-input fieldset__input-calendar" required="">
+                        </div>
+                        <div class="fieldset__input-wrapper">
+                            <label class="fieldset__label"></label>
+                            <input placeholder="ДД/ММ/ГГ"
+                                class="ant-select-selection-search-input fieldset__input-calendar" required="">
+                        </div>
+                    </fieldset>
+                </form>
+
+                <div class="form__btn">
+                    <button class="form__btn-send" type="button">Найти билеты</button>
+                </div>
+
+                <div class="modal__wrapper" style="display: none;">
+                    <div class="modal__container">
+                        <div class="modal__header modal__header-info">
+                        </div>
+                        <div class="modal__content">
+                            <p class="modal__title">Информационное сообщение</p>
+                            <p class="modal__text">Поля "Откуда" и "Куда" обязательны для заполнения</p>
+                        </div>
+                        <div class="modal__footer"><button class="modal__btn" type="button">Понятно</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="order-page order">
+            <div class="order-line line">
+                <div class="line__container">
+                    <ol class="line__list line__list-bg">
+                        <li class="line__item line__item_selected">
+                            <p class="line__title">
+                                <span class="line__num">1</span>Билеты
+                            </p>
+                        </li>
+                        <li class="line__item">
+                            <p class="line__title">
+                                <span class="line__num">2</span>Пассажиры
+                            </p>
+                        </li>
+                        <li class="line__item">
+                            <p class="line__title"><span class="line__num">3</span>Оплата</p>
+                        </li>
+                        <li class="line__item line__item_last">
+                            <p class="line__title">
+                                <span class="line__num">4</span>Проверка
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="order-container">
+                <div class="container">
+                    <div class="order-content">
+                        <div class="order-sidebar">
+                            <div class="order-filters filter">
+                                <div class="filter__date">
+                                    <fieldset class="filter__fieldset">
+                                        <legend class="fieldset__legend">Дата поездки</legend>
+                                        <div class="fieldset__input-wrapper">
+                                            <label class="fieldset__label"></label>
+                                            <input placeholder="2025-01-01"
+                                                class="fieldset__input fieldset__input-thither" required="">
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="filter__fieldset">
+                                        <legend class="fieldset__legend">Дата возвращения</legend>
+                                        <div class="fieldset__input-wrapper">
+                                            <label class="fieldset__label"></label>
+                                            <input placeholder="ДД/ММ/ГГ" class="fieldset__input fieldset__input-back"
+                                                required="">
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="filter__switch switch">
+
+                                    <div class="switch__component">
+                                        <div class="switch__image">
+                                            <img src="../icons/Cope.svg">
+                                        </div>
+                                        <span class="switch__title">Купе</span>
+                                        <button data-name="have_second_class" type="button" role="switch"
+                                            aria-checked="false" class="ant-switch switch__btn css-usln0u">
+                                            <div class="ant-switch-handle"></div>
+                                            <span class="ant-switch-inner">
+                                                <span class="ant-switch-inner-checked">
+                                                    <img src="../icons/orange cerl.svg">
+                                                </span>
+                                                <span class="ant-switch-inner-unchecked"></span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="switch__component">
+                                        <div class="switch__image">
+                                            <img src="../icons/plackart.svg">
+                                        </div>
+                                        <span class="switch__title">Плацкарт</span>
+                                        <button data-name="have_third_class" type="button" role="switch"
+                                            aria-checked="false" class="ant-switch switch__btn css-usln0u">
+                                            <div class="ant-switch-handle"></div>
+                                            <span class="ant-switch-inner">
+                                                <span class="ant-switch-inner-checked"></span>
+                                                <img src="../icons/Group 2 (1).svg">
+                                                <span class="ant-switch-inner-unchecked"></span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="switch__component">
+                                        <div class="switch__image">
+                                            <img src="../icons/setdayn.svg">
+                                        </div>
+                                        <span class="switch__title">Сидячий</span>
+                                        <button data-name="have_fourth_class" type="button" role="switch"
+                                            aria-checked="false" class="ant-switch switch__btn css-usln0u">
+                                            <div class="ant-switch-handle"></div>
+                                            <span class="ant-switch-inner">
+                                                <span class="ant-switch-inner-checked"></span>
+                                                <img src="../icons/Group 2 (1).svg">
+                                                <span class="ant-switch-inner-unchecked"></span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="switch__component">
+                                        <div class="switch__image">
+                                            <img src="../icons/lucs.svg">
+                                        </div>
+                                        <span class="switch__title">Люкс</span>
+                                        <button data-name="have_first_class" type="button" role="switch"
+                                            aria-checked="false" class="ant-switch switch__btn css-usln0u">
+                                            <div class="ant-switch-handle"></div>
+                                            <span class="ant-switch-inner">
+                                                <span class="ant-switch-inner-checked"></span>
+                                                <img src="../icons/Group 2 (1).svg">
+                                                <span class="ant-switch-inner-unchecked"></span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="switch__component">
+                                        <div class="switch__image">
+                                            <img src="../icons/wifi.svg">
+                                        </div>
+                                        <span class="switch__title">Wi-Fi</span>
+                                        <button data-name="have_wifi" type="button" role="switch" aria-checked="false"
+                                            class="ant-switch switch__btn css-usln0u">
+                                            <div class="ant-switch-handle"></div>
+                                            <span class="ant-switch-inner">
+                                                <span class="ant-switch-inner-checked"></span>
+                                                <img src="../icons/orange cerl.svg">
+                                                <span class="ant-switch-inner-unchecked"></span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="switch__component">
+                                        <div class="switch__image">
+                                            <img src="../icons/camolet.svg">
+                                        </div>
+                                        <span class="switch__title">Экспресс</span>
+                                        <button data-name="is_express" type="button" role="switch" aria-checked="false"
+                                            class="ant-switch switch__btn css-usln0u">
+                                            <div class="ant-switch-handle"></div><span class="ant-switch-inner"><span
+                                                    class="ant-switch-inner-checked"></span>
+                                                <img src="../icons/Group 2 (1).svg">
+                                                <span class="ant-switch-inner-unchecked"></span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="filter__price price">
+                                    <p class="price__title">Стоимость</p>
+                                    <div class="price__under-range">
+                                        <p>от</p>
+                                        <p>до</p>
+                                    </div>
+                                    <div class="slider">
+                                        <img src="../icons/slider/Rectangle 3.svg" class="filter__price-rectangle-1">
+                                        <img src="../icons/slider/Rectangle 3.8.svg" class="filter__price-rectangle-2">
+                                        <img src="../icons/slider/Ellipse 2.8.svg" class="filter__price-ellipse-1">
+                                        <img src="../icons/slider/Ellipse 2.8.svg" class="filter__price-ellipse-2">
+                                        <!-- <div class="ant-slider-rail">
+										</div>
+										<div class="ant-slider-track ant-slider-track-1" style="left: 0%; width: 100%;">
+										</div>
+										<div class="ant-slider-step">
+
+
+								
+											<span class="ant-slider-dot ant-slider-dot-active"
+												style="left: 0%; transform: translateX(-50%);"></span>
+											<span class="ant-slider-dot ant-slider-dot-active"
+												style="left: 100%; transform: translateX(-50%);"></span>
+										</div>
+										<div class="ant-slider-handle ant-slider-handle-1 ant-tooltip-open" tabindex="0"
+											role="slider" aria-valuemin="0" aria-valuemax="9999" aria-valuenow="0"
+											aria-disabled="false" aria-orientation="horizontal"
+											style="left: 0%; transform: translateX(-50%);"></div>
+										<div class="ant-slider-handle ant-slider-handle-2 ant-tooltip-open" tabindex="0"
+											role="slider" aria-valuemin="0" aria-valuemax="9999" aria-valuenow="9999"
+											aria-disabled="false" aria-orientation="horizontal"
+											style="left: 100%; transform: translateX(-50%);"></div> -->
+
+                                    </div>
+                                    <div class="ant-slider-mark">
+                                        <span class="ant-slider-mark-text ant-slider-mark-text-active">0</span>
+                                        <span class="ant-slider-mark-text ant-slider-mark-text-active">9999</span>
+                                    </div>
+                                </div>
+                                <div class="filter__period period-departure">
+                                    <div class="filter__period-control">
+                                        <img src="../icons/Subtract (1).svg">
+                                        <p class="filter__period-title">Туда</p>
+                                        <img src="../icons/Group 11.2 (1).svg">
+                                        <!-- <input class="filter__period-btn" id="period-btn-departure" type="checkbox">
+										<label for="period-btn-departure"></label> -->
+                                        <!-- <div class="filter__period-content">
+											<p class="filter__period-subtitle departure-subtitle-left">Время отправления
+											</p>
+											<div
+												class="ant-slider css-usln0u ant-slider-horizontal ant-slider-with-marks">
+												<div class="ant-slider-rail">
+												</div>
+												<div class="ant-slider-track ant-slider-track-1"
+													style="left: 0%; width: 100%;"></div>
+												<div class="ant-slider-step">
+													<span class="ant-slider-dot ant-slider-dot-active"
+														style="left: 0%; transform: translateX(-50%);"></span>
+													<span class="ant-slider-dot ant-slider-dot-active"
+														style="left: 100%; transform: translateX(-50%);"></span>
+												</div>
+												<div class="ant-slider-handle ant-slider-handle-1 ant-tooltip-open"
+													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
+													aria-valuenow="0" aria-disabled="false"
+													aria-orientation="horizontal"
+													style="left: 0%; transform: translateX(-50%);"></div>
+												<div class="ant-slider-handle ant-slider-handle-2 ant-tooltip-open"
+													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
+													aria-valuenow="24" aria-disabled="false"
+													aria-orientation="horizontal"
+													style="left: 100%; transform: translateX(-50%);"></div>
+												<div class="ant-slider-mark">
+													<span class="ant-slider-mark-text ant-slider-mark-text-active"
+														style="left: 0%; transform: translateX(-50%);">0:00</span>
+													<span class="ant-slider-mark-text ant-slider-mark-text-active"
+														style="left: 100%; transform: translateX(-50%);">24:00</span>
+												</div>
+											</div>
+											<p class="filter__period-subtitle departure-subtitle-right">Время прибытия</p>
+											<div
+												class="ant-slider css-usln0u ant-slider-horizontal ant-slider-with-marks">
+												<div class="ant-slider-rail"></div>
+												<div class="ant-slider-track ant-slider-track-1"
+													style="left: 0%; width: 100%;"></div>
+												<div class="ant-slider-step"><span
+														class="ant-slider-dot ant-slider-dot-active"
+														style="left: 0%; transform: translateX(-50%);"></span>
+													<span class="ant-slider-dot ant-slider-dot-active"
+														style="left: 100%; transform: translateX(-50%);"></span>
+												</div>
+												<div class="ant-slider-handle ant-slider-handle-1 ant-tooltip-open"
+													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
+													aria-valuenow="0" aria-disabled="false"
+													aria-orientation="horizontal"
+													style="left: 0%; transform: translateX(-50%);"></div>
+												<div class="ant-slider-handle ant-slider-handle-2 ant-tooltip-open"
+													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
+													aria-valuenow="24" aria-disabled="false"
+													aria-orientation="horizontal"
+													style="left: 100%; transform: translateX(-50%);"></div>
+												<div class="ant-slider-mark">
+													<span class="ant-slider-mark-text ant-slider-mark-text-active"
+														style="left: 0%; transform: translateX(-50%);">0:00</span>
+													<span class="ant-slider-mark-text ant-slider-mark-text-active"
+														style="left: 100%; transform: translateX(-50%);">24:00</span>
+												</div>
+											</div>
+										</div> -->
+                                    </div>
+                                </div>
+                                <div class="filter__period period-arrival">
+                                    <div class="filter__period-control">
+                                        <img src="../icons/Subtract (2).svg">
+                                        <p class="filter__period-title">Обратно</p>
+                                        <img src="../icons/Group 11.2 (1).svg">
+                                        <!-- <input class="filter__period-btn" id="period-btn-arrival" type="checkbox"><label
+											for="period-btn-arrival"></label> -->
+                                        <!-- <div class="filter__period-content">
+											<p class="filter__period-subtitle arrival-subtitle-left">Время отправления
+											</p>
+											<div
+												class="ant-slider css-usln0u ant-slider-horizontal ant-slider-with-marks">
+												<div class="ant-slider-rail"></div>
+												<div class="ant-slider-track ant-slider-track-1"
+													style="left: 0%; width: 100%;"></div>
+												<div class="ant-slider-step">
+													<span class="ant-slider-dot ant-slider-dot-active"
+														style="left: 0%; transform: translateX(-50%);"></span>
+													<span class="ant-slider-dot ant-slider-dot-active"
+														style="left: 100%; transform: translateX(-50%);"></span>
+												</div>
+												<div class="ant-slider-handle ant-slider-handle-1 ant-tooltip-open"
+													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
+													aria-valuenow="0" aria-disabled="false"
+													aria-orientation="horizontal"
+													style="left: 0%; transform: translateX(-50%);"></div>
+												<div class="ant-slider-handle ant-slider-handle-2 ant-tooltip-open"
+													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
+													aria-valuenow="24" aria-disabled="false"
+													aria-orientation="horizontal"
+													style="left: 100%; transform: translateX(-50%);"></div>
+												<div class="ant-slider-mark">
+													<span class="ant-slider-mark-text ant-slider-mark-text-active"
+														style="left: 0%; transform: translateX(-50%);">0:00</span>
+													<span class="ant-slider-mark-text ant-slider-mark-text-active"
+														style="left: 100%; transform: translateX(-50%);">24:00</span>
+												</div>
+											</div>
+											<p class="filter__period-subtitle arrival-subtitle-right">Время прибытия</p>
+											<div
+												class="ant-slider css-usln0u ant-slider-horizontal ant-slider-with-marks">
+												<div class="ant-slider-rail"></div>
+												<div class="ant-slider-track ant-slider-track-1"
+													style="left: 0%; width: 100%;"></div>
+												<div class="ant-slider-step"><span
+														class="ant-slider-dot ant-slider-dot-active"
+														style="left: 0%; transform: translateX(-50%);"></span>
+													<span class="ant-slider-dot ant-slider-dot-active"
+														style="left: 100%; transform: translateX(-50%);"></span>
+												</div>
+												<div class="ant-slider-handle ant-slider-handle-1 ant-tooltip-open"
+													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
+													aria-valuenow="0" aria-disabled="false"
+													aria-orientation="horizontal"
+													style="left: 0%; transform: translateX(-50%);"></div>
+												<div class="ant-slider-handle ant-slider-handle-2 ant-tooltip-open"
+													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
+													aria-valuenow="24" aria-disabled="false"
+													aria-orientation="horizontal"
+													style="left: 100%; transform: translateX(-50%);"></div>
+												<div class="ant-slider-mark"><span
+														class="ant-slider-mark-text ant-slider-mark-text-active"
+														style="left: 0%; transform: translateX(-50%);">0:00</span>
+													<span class="ant-slider-mark-text ant-slider-mark-text-active"
+														style="left: 100%; transform: translateX(-50%);">24:00</span>
+												</div>
+											</div>
+										</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-last-tickets last-tickets">
+                                <p class="last-tickets__title">Последние билеты</p>
+                                <div class="last-tickets__wrapper">
+                                    <div class="last-tickets__item ticket-item">
+                                        <div class="ticket-item__city">
+                                            <p class="ticket-item__from_city">санкт-Петербург</p>
+                                            <p class="ticket-item__to_city">самара</p>
+
+                                        </div>
+                                        <div class="ticket-item__railway">
+                                            <p class="ticket-item__from_railway">Московский вокзал</p>
+                                            <p class="ticket-item__to_railway">Самара</p>
+
+                                        </div>
+                                        <div class="ticket-item__options">
+                                            <img src="../icons/Group 2.2.svg">
+                                            <div class="ticket-item__option">
+
+                                            </div>
+                                        </div>
+                                        <p class="ticket-item__cost">от<span class="ticket-item__cost-value">2500</span>
+                                            <span class="ticket-item__cost-currency">₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="last-tickets__item ticket-item">
+                                        <div class="ticket-item__city">
+                                            <p class="ticket-item__from_city">москва</p>
+                                            <p class="ticket-item__to_city">казань</p>
+                                        </div>
+                                        <div class="ticket-item__railway">
+                                            <p class="ticket-item__from_railway">Киевский вокзал</p>
+                                            <p class="ticket-item__to_railway">Казань</p>
+                                        </div>
+                                        <div class="ticket-item__options">
+                                            <img src="../icons/Group 2.2.svg">
+                                            <div class="ticket-item__option">
+                                            </div>
+
+                                        </div>
+                                        <p class="ticket-item__cost">от<span class="ticket-item__cost-value">3650</span>
+                                            <span class="ticket-item__cost-currency">₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="last-tickets__item ticket-item">
+                                        <div class="ticket-item__city">
+                                            <p class="ticket-item__from_city">архангельск</p>
+                                            <p class="ticket-item__to_city">аткарск</p>
+                                        </div>
+                                        <div class="ticket-item__railway">
+                                            <p class="ticket-item__from_railway">Архангельск</p>
+                                            <p class="ticket-item__to_railway">Аткарск</p>
+                                        </div>
+                                        <div class="ticket-item__options">
+                                            <img src="../icons/Group 2.2.svg">
+                                            <div class="ticket-item__option">
+                                            </div>
+
+                                        </div>
+                                        <p class="ticket-item__cost">от<span class="ticket-item__cost-value">3200</span>
+                                            <span class="ticket-item__cost-currency">₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="last-tickets__item ticket-item">
+                                        <div class="ticket-item__city">
+                                            <p class="ticket-item__from_city">астрахань</p>
+                                            <p class="ticket-item__to_city">анапа</p>
+                                        </div>
+                                        <div class="ticket-item__railway">
+                                            <p class="ticket-item__from_railway">Астрахань</p>
+                                            <p class="ticket-item__to_railway">Анапа</p>
+                                        </div>
+                                        <div class="ticket-item__options">
+                                            <img src="../icons/Group 2.2.svg">
+                                            <div class="ticket-item__option">
+                                            </div>
+                                        </div>
+                                        <p class="ticket-item__cost">от<span class="ticket-item__cost-value">4800</span>
+                                            <span class="ticket-item__cost-currency">₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="last-tickets__item ticket-item">
+                                        <div class="ticket-item__city">
+                                            <p class="ticket-item__from_city">астрахань</p>
+                                            <p class="ticket-item__to_city">агрыз</p>
+                                        </div>
+                                        <div class="ticket-item__railway">
+                                            <p class="ticket-item__from_railway">Астрахань</p>
+                                            <p class="ticket-item__to_railway">Агрыз</p>
+                                        </div>
+                                        <div class="ticket-item__options">
+                                            <img src="../icons/Group 2.2.svg">
+                                            <div class="ticket-item__option">
+                                            </div>
+                                        </div>
+                                        <p class="ticket-item__cost">от<span class="ticket-item__cost-value">3500</span>
+                                            <span class="ticket-item__cost-currency">₽</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-results">
+                            <div class="order-results__control result-control">
+                                <p>найдено:&nbsp;&nbsp;<span class="result-control__find-value">0</span></p>
+                                <div class="result-control__sort">
+                                    <p>сортировать по:&nbsp;&nbsp;</p>
+                                    <div class="result-control__select"><input class="result-control__select-btn"
+                                            type="button" data-value="date" value="времени">
+                                        <div class="result-control__options"><input class="result-control__option"
+                                                type="button" data-value="date" value="времени">
+                                            <input class="result-control__option" type="button" data-value="price"
+                                                value="стоимости">
+                                            <input class="result-control__option" type="button" data-value="duration"
+                                                value="длительности">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result-control__view">
+                                    <p>показывать по:&nbsp;&nbsp;</p>
+                                    <div class="result-control__view-wrapper">
+                                        <button class="view-button view-button_active" type="button"
+                                            data-value="5">5</button>
+                                        <button class="view-button" type="button" data-value="10">10</button>
+                                        <button class="view-button" type="button" data-value="20">20</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- выбор места-->
+
+                            <div class="right__side">
+                                <div class="coaches">
+                                    <h2 class="coaches__title">выбор мест</h2>
+                                    <div class="coach">
+                                        <div class="choice__train-left">
+                                            <span class="choice__train-img-left"></span>
+                                            <button class="choice__train-btn" type="button">Выбрать другой
+                                                поезд</button>
+                                        </div>
+                                        <div class="coach__train">
+                                            <div class="coach__train-route">
+                                                <span class="coach__train-img"></span>
+                                                <div class="coach__train-description">
+                                                    <h3 class="train__description-name">116C</h3>
+                                                    <p class="train__description-city">Москва →</p>
+                                                    <p class="train__description-city">Санкт-Петербург</p>
+                                                </div>
+                                            </div>
+                                            <div class="coach__direction-time">
+                                                <div class="coach__direction-city">
+                                                    <h3 class="coach__time">00:10</h3>
+                                                    <p class="coach__direction-name">Москва</p>
+                                                    <p class="coach__direction-station">Ленинградский вокзал</p>
+                                                </div>
+                                                <div class="direction__arrow"></div>
+                                                <div class="coach__direction-city">
+                                                    <h3 class="coach__time">09:52</h3>
+                                                    <p class="coach__direction-name">Санкт-Петербург</p>
+                                                    <p class="coach__direction-station">Московский вокзал</p>
+                                                </div>
+                                            </div>
+                                            <div class="coach__duration">
+                                                <span class="coach__duration-img"></span>
+                                                <div class="coach__duration-text">
+                                                    <p>09 часов</p>
+                                                    <p>42 минут</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="amount__tickets">
+                                            <h3 class="amount__tickets-title">Количество билетов</h3>
+                                            <div class="tickets__age">
+                                                <div class="tickets__age-inputs">
+                                                    <input class="tickets__age-input" type="text"
+                                                        placeholder="Взрослых - 0" value="">
+                                                    <p class="tickets__adults-description">Можно добавить еще 5
+                                                        пассажиров</p>
+                                                </div>
+                                                <div class="tickets__age-inputs">
+                                                    <input class="tickets__age-input" type="text"
+                                                        placeholder="Детских - 0" value="">
+                                                    <p class="tickets__adults-description">Можно добавить еще 5 детей до
+                                                        10 лет. Свое место в вагоне, как у взрослых, но дешевле в
+                                                        среднем на 50-65%</p>
+                                                </div>
+                                                <div class="tickets__age-inputs">
+                                                    <input class="tickets__age-input" type="text"
+                                                        placeholder="Детских «без места» - 0" value="">
+                                                    <p class="tickets__adults-description">Доступно только для взрослого
+                                                        места. Можно добавить еще 0 детей.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="coaches__types">
+                                            <h3 class="coach__type-title">Тип вагона</h3>
+                                            <div class="coach__types">
+                                                <div class="coach__type">
+                                                    <span class="type__fourth-img"></span>
+                                                    <p class="type__text">Сидячий</p>
+                                                </div>
+                                                <div class="coach__type">
+                                                    <span class="type__third-img"></span>
+                                                    <p class="type__text">Плацкарт</p>
+                                                </div>
+                                                <div class="coach__type">
+                                                    <span class="type__second-img"></span>
+                                                    <p class="type__text">Купе</p>
+                                                </div>
+                                                <div class="coach__type">
+                                                    <span class="type__first-img-active"></span>
+                                                    <p class="type__text-active">Люкс</p>
+                                                </div>
+                                            </div>
+                                            <div class="coaches__numbering">
+                                                <div class="coaches__numbers">
+                                                    <p class="coaches__numbers-text">Вагоны</p>
+                                                    <span class="coaches__number-current">07 09</span>
+                                                </div>
+                                                <p class="coaches__numbers-text">Нумерация вагонов начинается с головы
+                                                    поезда</p>
+                                            </div>
+                                            <div class="">
+                                                <div class="coach__description-prices">
+                                                    <div class="coach__number">
+                                                        <h3 class="coach__number-title">07 09</h3>
+                                                        <p class="coach__number-text">вагон</p>
+                                                    </div>
+                                                    <div class="coach__seats-amount">
+                                                        <p class="seats__amount-title">Места <span
+                                                                class="seats__amount-num">12</span></p>
+                                                        <p class="seats__amount-text">Верхние <span
+                                                                class="seats__amount-num">6</span></p>
+                                                        <p class="seats__amount-text">Нижние <span
+                                                                class="seats__amount-num">6</span></p>
+                                                    </div>
+                                                    <div class="coach__seats-price">
+                                                        <p class="seats__price-title">Стоимость</p>
+                                                        <p class="seats__price-text">2905 <span
+                                                                class="sign__rub"></span></p>
+                                                        <p class="seats__price-text">3115 <span
+                                                                class="sign__rub"></span></p>
+                                                    </div>
+                                                    <div class="coach__services">
+                                                        <p class="coach__services-text">Обслуживание ФПК</p>
+                                                        <div class="coach__services-img">
+                                                            <div class="service__move"><span
+                                                                    class="service__air-selected"></span>
+                                                                <div class="none">кондиционер есть</div>
+                                                            </div>
+                                                            <div class="service__move">
+                                                                <span class="service__wifi-empty"></span>
+                                                                <div class="none">WI-FI нет</div>
+                                                            </div>
+                                                            <div class="service__move">
+                                                                <span class="service__linens service__included"></span>
+                                                                <div class="none">белье включено</div>
+                                                            </div>
+                                                            <div class="service__move">
+                                                                <span class="service__coffee"></span>
+                                                                <div class="none">питание</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="coach__seats-selected">
+                                                            <p>6 человек выбирают места в этом поезде</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="coach__seats-info">
+                                                    <span class="seats__info-first">
+                                                        <div class="scheme__seats-first" style="left: 130.63px;">
+                                                            <span class="seat__class seat__left seat__have">1</span>
+                                                            <span class="seat__class seat__right seat__have">2</span>
+                                                        </div>
+                                                        <div class="scheme__seats-first" style="left: 220.26px;">
+                                                            <span class="seat__class seat__left seat__have">3</span>
+                                                            <span class="seat__class seat__right seat__have">4</span>
+                                                        </div>
+                                                        <div class="scheme__seats-first" style="left: 309.89px;">
+                                                            <span class="seat__class seat__left seat__have">5</span>
+                                                            <span class="seat__class seat__right seat__have">6</span>
+                                                        </div>
+                                                        <div class="scheme__seats-first" style="left: 399.52px;">
+                                                            <span class="seat__class seat__left seat__have">7</span>
+                                                            <span class="seat__class seat__right seat__have">8</span>
+                                                        </div>
+                                                        <div class="scheme__seats-first" style="left: 489.15px;">
+                                                            <span class="seat__class seat__left seat__have">9</span>
+                                                            <span class="seat__class seat__right seat__have">10</span>
+                                                        </div>
+                                                        <div class="scheme__seats-first" style="left: 578.78px;">
+                                                            <span class="seat__class seat__left seat__have">11</span>
+                                                            <span class="seat__class seat__right seat__have">12</span>
+                                                        </div>
+                                                        <div class="scheme__seats-first" style="left: 668.41px;">
+                                                            <span
+                                                                class="seat__class seat__left seat__not-have">13</span>
+                                                            <span
+                                                                class="seat__class seat__right seat__not-have">14</span>
+                                                        </div>
+                                                        <div class="scheme__seats-first" style="left: 758.04px;">
+                                                            <span
+                                                                class="seat__class seat__left seat__not-have">15</span>
+                                                            <span
+                                                                class="seat__class seat__right seat__not-have">16</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="none">0 <span class="sign__rub"></span>
+                                        </div>
+                                    </div>
+                                    <div class="coach">
+                                        <div class="choice__train-right">
+                                            <span class="choice__train-img-right"></span>
+                                            <button class="choice__train-btn" type="button">Выбрать другой
+                                                поезд</button>
+                                        </div>
+                                        <div class="coach__train">
+                                            <div class="coach__train-route">
+                                                <span class="coach__train-img"></span>
+                                                <div class="coach__train-description">
+                                                    <h3 class="train__description-name">Калина - 57</h3>
+                                                    <p class="train__description-city">москва →</p>
+                                                    <p class="train__description-city">санкт-петербург</p>
+                                                </div>
+                                            </div>
+                                            <div class="coach__direction-time">
+                                                <div class="coach__direction-city">
+                                                    <h3 class="coach__time">23:30</h3>
+                                                    <p class="coach__direction-name">москва</p>
+                                                    <p class="coach__direction-station">Ленинградский вокзал</p>
+                                                </div>
+                                                <div class="direction__arrow"></div>
+                                                <div class="coach__direction-city">
+                                                    <h3 class="coach__time">12:59</h3>
+                                                    <p class="coach__direction-name">санкт-петербург</p>
+                                                    <p class="coach__direction-station">Московский вокзал</p>
+                                                </div>
+                                            </div>
+                                            <div class="coach__duration">
+                                                <span class="coach__duration-img">
+
+                                                </span>
+                                                <div class="coach__duration-text">
+                                                    <p>37 часов</p>
+                                                    <p>29 минут</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="amount__tickets">
+                                            <h3 class="amount__tickets-title">Количество билетов</h3>
+                                            <div class="tickets__age">
+                                                <div class="tickets__age-inputs">
+                                                    <input class="tickets__age-input" type="text"
+                                                        placeholder="Взрослых - 0" value="">
+                                                    <p class="tickets__adults-description">Можно добавить еще 5
+                                                        пассажиров</p>
+                                                </div>
+                                                <div class="tickets__age-inputs">
+                                                    <input class="tickets__age-input" type="text"
+                                                        placeholder="Детских - 0" value="">
+                                                    <p class="tickets__adults-description">Можно добавить еще 5 детей до
+                                                        10 лет. Свое место в вагоне, как у взрослых, но дешевле в
+                                                        среднем на 50-65%</p>
+                                                </div>
+                                                <div class="tickets__age-inputs">
+                                                    <input class="tickets__age-input" type="text"
+                                                        placeholder="Детских «без места» - 0" value="">
+                                                    <p class="tickets__adults-description">Доступно только для взрослого
+                                                        места. Можно добавить еще 0 детей.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="coaches__types">
+                                            <h3 class="coach__type-title">Тип вагона</h3>
+                                            <div class="coach__types">
+                                                <div class="coach__type">
+                                                    <span class="type__fourth-img"></span>
+                                                    <p class="type__text">Сидячий</p>
+                                                </div>
+                                                <div class="coach__type">
+                                                    <span class="type__third-img-active"></span>
+                                                    <p class="type__text-active">Плацкарт</p>
+                                                </div>
+                                                <div class="coach__type">
+                                                    <span class="type__second-img"></span>
+                                                    <p class="type__text">Купе</p>
+                                                </div>
+                                                <div class="coach__type">
+                                                    <span class="type__first-img"></span>
+                                                    <p class="type__text">Люкс</p>
+                                                </div>
+                                            </div>
+                                            <div class="coaches__numbering">
+                                                <div class="coaches__numbers">
+                                                    <p class="coaches__numbers-text">Вагоны</p>
+                                                    <span class="coaches__number-current">УН-95</span>
+                                                </div>
+                                                <p class="coaches__numbers-text">Нумерация вагонов начинается с головы
+                                                    поезда</p>
+                                            </div>
+                                            <div class="">
+                                                <div class="coach__description-prices">
+                                                    <div class="coach__number">
+                                                        <h3 class="coach__number-title">УН-95</h3>
+                                                        <p class="coach__number-text">вагон</p>
+                                                    </div>
+                                                    <div class="coach__seats-amount">
+                                                        <p class="seats__amount-title">Места <span
+                                                                class="seats__amount-num">42</span></p>
+                                                        <p class="seats__amount-text">Верхние <span
+                                                                class="seats__amount-num">16</span></p>
+                                                        <p class="seats__amount-text">Нижние <span
+                                                                class="seats__amount-num">16</span></p>
+                                                        <p class="seats__amount-text">Боковые <span
+                                                                class="seats__amount-num">10</span></p>
+                                                    </div>
+                                                    <div class="coach__seats-price">
+                                                        <p class="seats__price-title">Стоимость</p>
+                                                        <p class="seats__price-text">2895 <span
+                                                                class="sign__rub"></span></p>
+                                                        <p class="seats__price-text">4890 <span
+                                                                class="sign__rub"></span></p>
+                                                        <p class="seats__price-text">4470 <span
+                                                                class="sign__rub"></span></p>
+                                                    </div>
+                                                    <div class="coach__services">
+                                                        <p class="coach__services-text">Обслуживание ФПК</p>
+                                                        <div class="coach__services-img">
+                                                            <div class="service__move">
+                                                                <span class="service__air-selected"></span>
+                                                                <div class="none">кондиционер есть</div>
+                                                            </div>
+                                                            <div class="service__move">
+                                                                <span class="service__wifi-empty"></span>
+                                                                <div class="none">WI-FI нет</div>
+                                                            </div>
+                                                            <div class="service__move">
+                                                                <span class="service__linens "></span>
+                                                                <div class="none">белье есть 150 р.</div>
+                                                            </div>
+                                                            <div class="service__move">
+                                                                <span class="service__coffee"></span>
+                                                                <div class="none">питание</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="coach__seats-selected">
+                                                            <p>6 человек выбирают места в этом поезде</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="coach__seats-info">
+                                                    <span class="seats__info-third">
+                                                        <div class="scheme__seats-third" style="left: 130.63px;">
+                                                            <span class="seat__class seat__top-left seat__have">2</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-left seat__have">1</span>
+                                                            <span
+                                                                class="seat__class seat__side-left seat__have">33</span>
+                                                            <span
+                                                                class="seat__class seat__top-right seat__have">4</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-right seat__have">3</span>
+                                                            <span
+                                                                class="seat__class seat__side-right seat__have">34</span>
+                                                        </div>
+                                                        <div class="scheme__seats-third" style="left: 220.26px;">
+                                                            <span class="seat__class seat__top-left seat__have">6</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-left seat__have">5</span>
+                                                            <span
+                                                                class="seat__class seat__side-left seat__have">35</span>
+                                                            <span
+                                                                class="seat__class seat__top-right seat__have">8</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-right seat__have">7</span>
+                                                            <span
+                                                                class="seat__class seat__side-right seat__have">36</span>
+                                                        </div>
+                                                        <div class="scheme__seats-third" style="left: 309.89px;">
+                                                            <span
+                                                                class="seat__class seat__top-left seat__have">10</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-left seat__have">9</span>
+                                                            <span
+                                                                class="seat__class seat__side-left seat__have">37</span>
+                                                            <span
+                                                                class="seat__class seat__top-right seat__have">12</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-right seat__have">11</span>
+                                                            <span
+                                                                class="seat__class seat__side-right seat__have">38</span>
+                                                        </div>
+                                                        <div class="scheme__seats-third" style="left: 399.52px;">
+                                                            <span
+                                                                class="seat__class seat__top-left seat__have">14</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-left seat__have">13</span>
+                                                            <span
+                                                                class="seat__class seat__side-left seat__have">39</span>
+                                                            <span
+                                                                class="seat__class seat__top-right seat__have">16</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-right seat__have">15</span>
+                                                            <span
+                                                                class="seat__class seat__side-right seat__have">40</span>
+                                                        </div>
+                                                        <div class="scheme__seats-third" style="left: 489.15px;">
+                                                            <span
+                                                                class="seat__class seat__top-left seat__have">18</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-left seat__have">17</span>
+                                                            <span
+                                                                class="seat__class seat__side-left seat__have">41</span>
+                                                            <span
+                                                                class="seat__class seat__top-right seat__have">20</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-right seat__have">19</span>
+                                                            <span
+                                                                class="seat__class seat__side-right seat__have">42</span>
+                                                        </div>
+                                                        <div class="scheme__seats-third" style="left: 578.78px;">
+                                                            <span
+                                                                class="seat__class seat__top-left seat__have">22</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-left seat__have">21</span>
+                                                            <span
+                                                                class="seat__class seat__side-left seat__not-have">43</span>
+                                                            <span
+                                                                class="seat__class seat__top-right seat__have">24</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-right seat__have">23</span>
+                                                            <span
+                                                                class="seat__class seat__side-right seat__not-have">44</span>
+                                                        </div>
+                                                        <div class="scheme__seats-third" style="left: 668.41px;">
+                                                            <span
+                                                                class="seat__class seat__top-left seat__have">26</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-left seat__have">25</span>
+                                                            <span
+                                                                class="seat__class seat__side-left seat__not-have">45</span>
+                                                            <span
+                                                                class="seat__class seat__top-right seat__have">28</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-right seat__have">27</span>
+                                                            <span
+                                                                class="seat__class seat__side-right seat__not-have">46</span>
+                                                        </div>
+                                                        <div class="scheme__seats-third" style="left: 758.04px;">
+                                                            <span
+                                                                class="seat__class seat__top-left seat__have">30</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-left seat__have">29</span>
+                                                            <span
+                                                                class="seat__class seat__side-left seat__not-have">47</span>
+                                                            <span
+                                                                class="seat__class seat__top-right seat__have">32</span>
+                                                            <span
+                                                                class="seat__class seat__bottom-right seat__have">31</span>
+                                                            <span
+                                                                class="seat__class seat__side-right seat__not-have">48</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="none">0 <span class="sign__rub"></span>
+                                        </div>
+                                    </div>
+                                    <button class="coach__button-disable" type="button" disabled="">далее</button>
+                                </div>
+                            </div>
+
+
+                            <div class="order-results__wrapper">
+                                <div class="order-pagination">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__wrapper" style="display: none;">
+                    <div class="modal__container">
+                        <div class="modal__header modal__header-error"
+                            style="background-color: rgba(255, 61, 0, 0.38);">
+
+                        </div>
+                        <div class="modal__content">
+                            <p class="modal__title">Сообщение об ошибке</p>
+                            <p class="modal__text"></p>
+                        </div>
+                        <div class="modal__footer"><button class="modal__btn" type="button">Понятно</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!--футер-->
+        <footer class="footer" id="footer-contact">
+            <div class="container footer-container">
+                <div class="footer-contact contact">
+                    <p class="сontact-title">Свяжитесь с нами</p>
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <a class="contact-link" href="tel:8 (800) 000 00 00" target="_blank">
+                                <img src="../icons/Footer phone.svg" alt="Телефон" class="contact-image" />
+                                <p class="contact-desk">8 (800) 000 00 00</p>
+                            </a>
+                        </li>
+                        <li class="contact-item">
+                            <a class="contact-link" href="mailto:inbox@mail.ru" target="_blank">
+                                <img src="../icons/footer-mail.svg" alt="Email" class="contact-image" />
+                                <p class="contact-desk">inbox@mail.ru</p>
+                            </a>
+                        </li>
+                        <li class="contact-item">
+                            <a class="contact-link" href="Skype" target="_blank">
+                                <img src="../icons/footer-skype.svg" alt="Skype" class="contact-image" />
+                                <p class="contact-desk">tu.train.tickets</p>
+                            </a>
+                        </li>
+
+                        <li class="contact-item">
+                            <div class="contact-link">
+                                <img src="../icons/footer-Vector.svg" style="margin-right: 10px;" alt="Адрес на карте"
+                                    class="contact-image" />
+                                <p class="contact-desk">г. Москва <br>ул. Московская <br>27-35 555 555</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-subscribe_col2">
+                    <div class="footer-subscribe">
+                        <p class="subscribe-title">Подписка</p>
+                        <p class="subscribe-subtitle">Будьте в курсе событий</p>
+                        <input type="text" placeholder="e-mail" />
+                        <button type="submit">ОТПРАВИТЬ</button>
+                    </div>
+                    <div class="social-media-communication">
+                        <p class="subscribe-title">Подписывайтесь на нас</p>
+                        <ul class="media-social-link">
+                            <li class="subscribe-social-item">
+                                <a class="social-link" href="https://www.youtube.com"><img
+                                        src="../icons/footer-youtube.svg" alt="YouTube" /></a>
+                            </li>
+                            <li class="subscribe-social-item">
+                                <a class="social-link" href="https://www.linkedin.com"><img src="../icons/footer-in.svg"
+                                        alt="LinkedIn" /></a>
+                            </li>
+                            <li class="subscribe-social-item">
+                                <a class="social-link" href="https://www.google.com"><img src="../icons/footer-G.svg"
+                                        alt="Google+" /></a>
+                            </li>
+                            <li class="subscribe-social-item">
+                                <a class="social-link" href="https://www.facebook.com"><img src="../icons/footer-F.svg"
+                                        alt="Facebook" /></a>
+                            </li>
+                            <li class="subscribe-social-item">
+                                <a class="social-link" href="https://twitter.com"><img src="../icons/footer-Twit.svg"
+                                        alt="Twitter" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="decorate-line">
+                <section class="line">
+                    <span class="strip-bar"></span>
+                </section>
+
+                <div class="container">
+                    <div class="footer-copyright">
+                        <div class="container-copyright">
+                            <a class="copyright-logo-link" href="">Лого</a>
+
+                            <button class="copyright-btn" type="button"><img src="../icons/footer-arrow.svg"
+                                    alt="Стрелка" /></button>
+
+                            <p class="copyright-info">2024 WEB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</body>
+
+</html>
