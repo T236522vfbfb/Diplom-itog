@@ -1581,10 +1581,11 @@ input {
 }
 .train-route {
 	display: grid;
-    grid-template-columns: 1fr 4fr;
+	grid-template-columns: 1fr 4fr;
 }
 
-.direction-city, .selection-city {
+.direction-city,
+.selection-city {
 	font-family: "Roboto-Regular";
 	font-size: 24px;
 }
@@ -1646,7 +1647,6 @@ input {
 .ticket-options {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-
 }
 
 .train__tickets {
@@ -1798,8 +1798,6 @@ input {
 /*правая сторона*/
 
 .right__side {
-	width: 67%;
-	margin-top: 175px;
 	margin-left: 3%;
 	margin-bottom: 140px;
 }
@@ -1821,8 +1819,12 @@ input {
 }
 
 .choice__train-left {
-	display: flex;
+	display: inline-block;
 	margin: 36px 0 32px 2%;
+	padding-left: 100px;
+	margin-left: 20px;
+	background-image: url(../icons/strela.svg);
+	background-repeat: no-repeat;
 }
 
 .choice__train-img-left {
@@ -1860,7 +1862,7 @@ input {
 	width: 30px;
 	height: 30px;
 	background-image: url(../icons/train\ orange.svg);
-	margin: 45px 30px;
+	margin: 60px 35px;
 }
 .coach__train-description {
 	margin-top: auto;
@@ -1874,9 +1876,36 @@ input {
 	margin-bottom: 5px;
 }
 
+.type__fourth-img {
+	background-image: url(../icons/setdayn.svg);
+	height: 50px;
+}
+
+.type__third-img {
+	background-image: url(../icons/plackart.svg);
+	height: 50px;
+}
+
+.type__second-img {
+	background-image: url(../icons/Cope.svg);
+	height: 50px;
+}
+
+.type__first-img-active {
+	background-image: url(../icons/Luks.svg);
+	height: 50px;
+}
+
+.coaches__number-current-1, .coaches__number-current-2, .coaches__number-current-3 {
+	padding: 5px;
+	font-size: 18px;
+}
+
+.coaches__number-current-2 {
+ color: #fff;
+}
 .train__description-city {
 	font-size: 16px;
-	font-weight: 400;
 	line-height: 19px;
 	color: #292929;
 	text-transform: capitalize;
@@ -1915,7 +1944,7 @@ input {
 }
 .direction__arrow {
 	display: flex;
-	margin-top: 25px;
+	margin-top: 60px;
 	width: 30px;
 	height: 20px;
 	background-image: url(../icons/Vector\ 6.svg);
@@ -1928,7 +1957,7 @@ input {
 	width: 30px;
 	height: 30px;
 	background-image: url(../icons/Group\ vector\ oran.svg);
-	margin: 47px 10px 46px 0;
+	margin: 60px 20px;
 }
 
 .coach__duration-text {
@@ -1940,7 +1969,6 @@ input {
 }
 .amount__tickets {
 	margin-top: 40px;
-	height: 337px;
 	border-bottom: 1px dashed #c4c4c4;
 }
 .amount__tickets-title {
@@ -1963,7 +1991,6 @@ input {
 	align-items: center;
 }
 .tickets__age-input {
-	width: 240px;
 	height: 50px;
 	padding-left: 15px;
 	background: #fff;
@@ -1981,7 +2008,7 @@ input {
 	line-height: 19px;
 	color: #928f94;
 	margin-top: 23px;
-	width: 240px;
+	padding: 0 10px;
 }
 .tickets__age-inputs {
 	width: 30%;
@@ -1992,7 +2019,6 @@ input {
 	align-items: center;
 }
 .tickets__age-input {
-	width: 240px;
 	height: 50px;
 	padding-left: 15px;
 	background: #fff;
@@ -2077,7 +2103,7 @@ input {
 	color: #fff;
 	margin-left: 10px;
 }
-.coaches__numbers-text {
+.coaches__number-text {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 19px;
@@ -2094,7 +2120,7 @@ input {
 	width: 190px;
 }
 .coach__number-title {
-	font-size: 36px;
+	font-size: 50px;
 	font-weight: 700;
 	line-height: 84px;
 	color: #292929;
@@ -2102,6 +2128,7 @@ input {
 	margin-top: 25px;
 }
 .coach__number-text {
+	
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 28px;
@@ -2196,29 +2223,34 @@ input {
 	display: flex;
 }
 
+.coach__seats-info {
+	padding: 0 20px 30px;
+}
 .seats__info-first {
 	background-image: url(../icons/imagetrain.svg);
-}
-
-.seats__info-first,
-.seats__info-second,
-.seats__info-third,
-.seats__info-fourth {
+	background-repeat: no-repeat;
+	background-size: 100%;
 	display: flex;
-	position: relative;
-	width: 920px;
-	height: 145px;
-	margin: 0 18px 80px;
+	padding: 22px 10% 60px 14%;
 }
-.scheme__seats-first,
-.scheme__seats-second,
-.scheme__seats-third,
-.scheme__seats-fourth {
-	position: absolute;
-	width: 89.63px;
-	height: 114px;
-	top: 28px;
-	left: 121px;
+.seat__class {
+	border: 2px solid rgba(0, 0, 0, 0);
+	width: 20px;
+	height: 22px;
+}
+.seat_selected {
+	border: 2px solid var(--color-yellow-orange);
+	cursor: pointer;
+}
+.scheme__seats-first {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.seats__info-first .scheme__seats-first:nth-child(2n) {
+	margin-right: 0%;
+}
+.seats__info-first .scheme__seats-first:nth-child(2n+1) {
+	margin-right: 5%;
 }
 
 .coach__button-disable {
