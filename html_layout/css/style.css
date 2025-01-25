@@ -37,11 +37,18 @@ nav {
 .name {
 	font-family: "Roboto-Light";
 	list-style: none;
-	margin-right: 30px;
 	line-height: 80px;
 	font-size: 25px;
+	background-color: var(--color-light-grey);
 }
-
+.train-name-image {
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+}
+.train-number {
+	text-align: center;
+}
 .container {
 	max-width: 1000px;
 	margin: auto;
@@ -1196,6 +1203,7 @@ svg {
 }
 
 .filter__date {
+	box-sizing: border-box;
 	padding: 35px 35px 30px 30px;
 }
 
@@ -1544,8 +1552,9 @@ input {
 	background-position: center;
 }
 
-.train__name-text {
-	font-size: 24px;
+.train-name-city {
+	font-family: "Roboto-Regular";
+	font-size: 16px;
 	font-weight: 500;
 	line-height: 28px;
 	text-align: center;
@@ -1559,17 +1568,25 @@ input {
 	line-height: 19px;
 	color: #292929;
 	text-transform: capitalize;
-	margin-left: 25px;
 }
-
+.number-train-selection {
+	margin-bottom: 40px;
+	border-bottom: 4px solid var(--color-yellow-orange);
+	border-right: 4px solid var(--color-yellow-orange);
+}
 .train-selection {
 	display: flex;
-	width: 469px;
-	border-right: 1px dashed #e5e5e5;
+	border-right: 1px dashed #fff;
+	background-color: var(--color-main-light);
+}
+.train-route {
+	display: grid;
+    grid-template-columns: 1fr 4fr;
 }
 
-.number-train-selection {
-	display: inline;
+.direction-city, .selection-city {
+	font-family: "Roboto-Regular";
+	font-size: 24px;
 }
 
 .train-selection-route {
@@ -1626,17 +1643,20 @@ input {
 	height: 20px;
 	background-image: url(../icons/Subtract1.svg);
 }
+.ticket-options {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+}
 
 .train__tickets {
-	display: flex;
 	flex-direction: column;
+	background-color: var(--color-main-light);
 }
 
 .train__ticket {
-	display: flex;
 	align-items: baseline;
 	margin-bottom: 26px;
-	height: 29px;
 }
 
 .train__tickets-options {
