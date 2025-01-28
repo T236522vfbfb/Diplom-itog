@@ -1816,6 +1816,7 @@ input {
 	border: 1px solid #c4c4c4;
 	box-shadow: 0 2px 2px #00000040;
 	margin-bottom: 30px;
+	width: 957px;
 }
 
 .choice__train-left {
@@ -1846,11 +1847,13 @@ input {
 	cursor: pointer;
 }
 
-.coach__train {
-	display: flex;
-	background: #f7f6f6;
-	min-height: 123px;
-}
+.coach__train {	
+		display: flex;
+		justify-content: space-between;
+		background: #f7f6f6;
+		min-height: 123px;
+		padding-right: 20px;
+	}
 
 .coach__train-route {
 	display: flex;
@@ -1858,15 +1861,17 @@ input {
 }
 
 .coach__train-img {
-	display: flex;
 	width: 30px;
 	height: 30px;
 	background-image: url(../icons/train\ orange.svg);
-	margin: 60px 35px;
+	margin: 60px 15px;
 }
 .coach__train-description {
 	margin-top: auto;
 	margin-bottom: auto;
+}
+.coach__train-description * {
+	margin: 0;
 }
 .train__description-name {
 	font-size: 24px;
@@ -1887,22 +1892,26 @@ input {
 }
 
 .type__second-img {
-	background-image: url(../icons/Cope.svg);
+	background-image: url(../icons/Cupe\ grey.svg);
 	height: 50px;
+	width: 50px;
 }
 
 .type__first-img-active {
 	background-image: url(../icons/Luks.svg);
 	height: 50px;
+	width: 57px;
 }
 
-.coaches__number-current-1, .coaches__number-current-2, .coaches__number-current-3 {
+.coaches__number-current-1,
+.coaches__number-current-2,
+.coaches__number-current-3 {
 	padding: 5px;
 	font-size: 18px;
 }
 
 .coaches__number-current-2 {
- color: #fff;
+	color: #fff;
 }
 .train__description-city {
 	font-size: 16px;
@@ -1921,6 +1930,9 @@ input {
 .coach__direction-city {
 	margin-left: auto;
 	margin-right: auto;
+}
+.coach__direction-city * {
+	margin: 0;
 }
 .coach__time {
 	font-size: 24px;
@@ -1943,11 +1955,10 @@ input {
 	color: #928f94;
 }
 .direction__arrow {
-	display: flex;
-	margin-top: 60px;
 	width: 30px;
-	height: 20px;
 	background-image: url(../icons/Vector\ 6.svg);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
 }
 .coach__duration {
 	display: flex;
@@ -1963,9 +1974,13 @@ input {
 .coach__duration-text {
 	font-size: 18px;
 	font-weight: 400;
-	line-height: 21px;
 	color: #000;
-	margin-top: 42px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.coach__duration-text p {
+	margin: 0;
 }
 .amount__tickets {
 	margin-top: 40px;
@@ -1981,9 +1996,20 @@ input {
 
 .tickets__age {
 	display: flex;
+	justify-content: space-between;
+}
+.tickets__age * {
+	box-sizing: border-box;
+}
+.tickets__age-inputs_bg {
+	background: var(--color-light-grey);
+}
+.tickets__age-inputs_border {
+	border: 1px solid var(--color-yellow-orange);
 }
 .tickets__age-inputs {
-	width: 30%;
+	flex: 1;
+	padding: 0 30px;
 	height: 192px;
 	padding-top: 20px;
 	display: flex;
@@ -1992,6 +2018,7 @@ input {
 }
 .tickets__age-input {
 	height: 50px;
+	width: 100%;
 	padding-left: 15px;
 	background: #fff;
 	border: 1px solid #928f94;
@@ -2008,7 +2035,6 @@ input {
 	line-height: 19px;
 	color: #928f94;
 	margin-top: 23px;
-	padding: 0 10px;
 }
 .tickets__age-inputs {
 	width: 30%;
@@ -2065,13 +2091,11 @@ input {
 	width: 50px;
 	background-image: url(../icons/Union.svg);
 }
-.type__second-img {
-	width: 50px;
-	background-image: url(../icons/Union2.svg);
-}
-.type__first-img-active {
+
+.type__first-img {
 	width: 57px;
 	background-image: url(../icons/Luks.svg);
+	height: 50px;
 }
 
 .type__text-active {
@@ -2094,6 +2118,7 @@ input {
 	font-weight: 400;
 	line-height: 19px;
 	color: #292929;
+	padding-right: 20px;
 }
 
 .coaches__number-current {
@@ -2114,6 +2139,8 @@ input {
 	display: flex;
 	height: 160px;
 	margin-bottom: 100px;
+	justify-content: space-between;
+	padding-right: 30px;
 }
 .coach__number {
 	background-color: #ffa80070;
@@ -2127,8 +2154,20 @@ input {
 	text-align: center;
 	margin-top: 25px;
 }
+
+.choice__train-right {
+	display: inline-block;
+	margin: 36px 0 32px 2%;
+	padding-left: 100px;
+	margin-left: 20px;
+	background-image: url(../icons/Nalevo.svg);
+	background-repeat: no-repeat;
+}
+
+.choice__train-img-right {
+	margin-right: 100px;
+}
 .coach__number-text {
-	
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 28px;
@@ -2176,12 +2215,14 @@ input {
 }
 .coach__services {
 	margin-top: 33px;
+	flex: 0.8;
 }
 .coach__services-text {
 	margin-bottom: 20px;
 }
 .coach__services-img {
 	display: flex;
+	gap: 8px;
 }
 
 .service__move {
@@ -2189,21 +2230,31 @@ input {
 }
 .service__air-selected {
 	background-image: url(../icons/Air.svg);
+	width: 37px;
+	height: 35px;
+	display: block;
+	background-repeat: no-repeat;
 }
+
 .service__wifi-empty {
-	background-image: url(../icons/wifi.svg);
-	cursor: not-allowed;
-	opacity: 0.3;
+	background-image: url(../icons/WiFi\ Black.svg);
+	width: 37px;
+	height: 35px;
+	display: block;
+	background-repeat: no-repeat;
 }
 
 .service__included {
 	background-color: #ffa800;
-	opacity: 0.5;
 	border: none;
 }
 
 .service__linens {
 	background-image: url(../icons/OrangePolot.svg);
+	width: 37px;
+	height: 35px;
+	display: block;
+	background-repeat: no-repeat;
 }
 .service__move {
 	position: relative;
@@ -2211,16 +2262,18 @@ input {
 
 .service__coffee {
 	background-image: url(../icons/OrangeCofe.svg);
-	cursor: not-allowed;
-	opacity: 0.3;
+	width: 37px;
+	height: 35px;
+	display: block;
+	background-repeat: no-repeat;
 }
+
 .coach__seats-selected {
-	width: 200px;
-	height: 72px;
 	background: #f3f3f3;
 	border-radius: 5px;
-	margin-top: 60px;
+	margin-top: 40px;
 	display: flex;
+	padding-left: 15px;
 }
 
 .coach__seats-info {
@@ -2231,12 +2284,12 @@ input {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	display: flex;
-	padding: 22px 10% 60px 14%;
+	padding: 30px 10% 60px 134px;
 }
 .seat__class {
 	border: 2px solid rgba(0, 0, 0, 0);
 	width: 20px;
-	height: 22px;
+	height: 25px;
 }
 .seat_selected {
 	border: 2px solid var(--color-yellow-orange);
@@ -2247,10 +2300,10 @@ input {
 	flex-direction: column-reverse;
 }
 .seats__info-first .scheme__seats-first:nth-child(2n) {
-	margin-right: 0%;
+	margin-right: 5px;
 }
-.seats__info-first .scheme__seats-first:nth-child(2n+1) {
-	margin-right: 5%;
+.seats__info-first .scheme__seats-first:nth-child(2n + 1) {
+	margin-right: 38px;
 }
 
 .coach__button-disable {
