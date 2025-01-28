@@ -42,7 +42,7 @@ nav {
 	list-style: none;
 	line-height: 80px;
 	font-size: 25px;
-	background-color: var(--color-light-grey);
+	color: var(--color-light-grey);
 }
 .train-name-image {
 	display: flex;
@@ -76,11 +76,13 @@ nav {
 }
 
 .header-menu {
-	color: #ffffff;
-	display: flex;
-	padding: 0;
-	margin: 0;
-}
+		color: #ffffff;
+		display: flex;
+		gap: 20px;
+		padding: 0;
+		margin: 0;
+	}
+
 
 .arial {
 	background-image: url(../icons/image.svg);
@@ -551,12 +553,19 @@ p:last-of-type {
 	width: 100%;
 }
 
+.footer-subscribe div {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	row-gap: 10px;
+}
 .footer-subscribe input {
 	padding: 16px;
 	width: 400px;
+	background-color: var(--color-light-grey);
 }
 .footer-subscribe input::placeholder {
 	color: var(--color-secondary-light);
+	font-size: 20px;
 }
 
 .footer-subscribe button {
@@ -583,9 +592,12 @@ p:last-of-type {
 }
 
 .contact-item {
-	font-size: 15px;
+	font-size: 24px;
 	font-weight: 400;
 	color: var(--color-main-light);
+}
+.contact-item p {
+	margin: 0;
 }
 
 .contact-link {

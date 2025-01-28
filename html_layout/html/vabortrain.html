@@ -10,105 +10,108 @@
 
 <body>
 	<section class="arial">
-	<header class="header-train">
-		<!--Лого полоска с логотипом-->
-		<section class="logo-wrapper">
-			<div class="container">
-				<a class="header-logo">Лого</a>
-			</div>
-		</section>
-		<!--конец полоски с логотипом-->
-		<nav>
-			<div class="container">
-				<ul class="header-menu">
-					<li class="name">О нас</li>
-					<li class="name">Как это работает</li>
-					<li class="name">Отзывы</li>
-					<li class="name">Контакты</li>
-				</ul>
-			</div>
-		</nav>
-		<div class="search-widget">
+		<header class="header-train">
+			<!--Лого полоска с логотипом-->
+			<section class="logo-wrapper">
+				<div class="container">
+					<a class="header-logo">Лого</a>
+				</div>
+			</section>
+			<!--конец полоски с логотипом-->
+			<nav>
+				<div class="container">
+					<ul class="header-menu">
+						<li class="name">О нас</li>
+						<li class="name">Как это работает</li>
+						<li class="name">Отзывы</li>
+						<li class="name">Контакты</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="search-widget">
 
-			<form class="MainSearch-widget">
-				<fieldset class="direction">
-					<legend class="fieldset-legend">Направление</legend>
+				<form class="MainSearch-widget">
+					<fieldset class="direction">
+						<legend class="fieldset-legend">Направление</legend>
 
-					<div class="fieldset__input-wrapper">
-						<label class="fieldset__label">
-						</label>
-						<div>
-							<div class="ant-select-selector">
-								<span class="ant-select-selection-search">
-									<input placeholder="Москва" type="search" autocomplete="off"
-										class="ant-select-selection-search-input" id="rc_select_2">
-								</span>
+						<div class="fieldset__input-wrapper">
+							<label class="fieldset__label">
+							</label>
+							<div>
+								<div class="ant-select-selector">
+									<span class="ant-select-selection-search">
+										<input placeholder="Москва" type="search" autocomplete="off"
+											class="ant-select-selection-search-input" id="rc_select_2">
+									</span>
+								</div>
+
+								<div class="city-list">
+									<ul>
+										<li>Москва</li>
+									</ul>
+								</div>
+
 							</div>
-
-							<div class="city-list">
-								<ul>
-									<li>Москва</li>
-								</ul>
-							</div>
-
 						</div>
-					</div>
 
-					<div class="fieldset__btn">
-						<button class="fieldset-direction__btn" type="button"></button>
-					</div>
-
-					<div class="fieldset__input-wrapper">
-						<label for="to" class="fieldset__label">
-						</label>
-						<div class="">
-							<div class="ant-select-selector">
-								<span class="ant-select-selection-search">
-									<input type="search" autocomplete="off" class="ant-select-selection-search-input">
-								</span>
-							</div>
-
-							<div class="city-list">
-								<ul>
-									<li>Москва</li>
-									<li>САНКТ-ПЕТЕРБУРГ</li>
-								</ul>
-							</div>
-
+						<div class="fieldset__btn">
+							<button class="fieldset-direction__btn" type="button"></button>
 						</div>
-					</div>
-				</fieldset>
 
-				<fieldset class="fieldset-date">
-					<legend class="fieldset-legend">Дата</legend>
-					<div class="fieldset__input-wrapper">
-						<label class="fieldset__label"></label>
-						<input placeholder="2024-12-28" class="ant-select-selection-search-input fieldset__input-calendar" required="">
-					</div>
-					<div class="fieldset__input-wrapper">
-						<label class="fieldset__label"></label>
-						<input placeholder="ДД/ММ/ГГ" class="ant-select-selection-search-input fieldset__input-calendar" required="">
-					</div>
-				</fieldset>
-			</form>
+						<div class="fieldset__input-wrapper">
+							<label for="to" class="fieldset__label">
+							</label>
+							<div class="">
+								<div class="ant-select-selector">
+									<span class="ant-select-selection-search">
+										<input type="search" autocomplete="off"
+											class="ant-select-selection-search-input">
+									</span>
+								</div>
 
-			<div class="form__btn">
-				<button class="form__btn-send" type="button">Найти билеты</button>
-			</div>
+								<div class="city-list">
+									<ul>
+										<li>Москва</li>
+										<li>САНКТ-ПЕТЕРБУРГ</li>
+									</ul>
+								</div>
 
-			<div class="modal__wrapper" style="display: none;">
-				<div class="modal__container">
-					<div class="modal__header modal__header-info">
-					</div>
-					<div class="modal__content">
-						<p class="modal__title">Информационное сообщение</p>
-						<p class="modal__text">Поля "Откуда" и "Куда" обязательны для заполнения</p>
-					</div>
-					<div class="modal__footer"><button class="modal__btn" type="button">Понятно</button>
+							</div>
+						</div>
+					</fieldset>
+
+					<fieldset class="fieldset-date">
+						<legend class="fieldset-legend">Дата</legend>
+						<div class="fieldset__input-wrapper">
+							<label class="fieldset__label"></label>
+							<input placeholder="2024-12-28"
+								class="ant-select-selection-search-input fieldset__input-calendar" required="">
+						</div>
+						<div class="fieldset__input-wrapper">
+							<label class="fieldset__label"></label>
+							<input placeholder="ДД/ММ/ГГ"
+								class="ant-select-selection-search-input fieldset__input-calendar" required="">
+						</div>
+					</fieldset>
+				</form>
+
+				<div class="form__btn">
+					<button class="form__btn-send" type="button">Найти билеты</button>
+				</div>
+
+				<div class="modal__wrapper" style="display: none;">
+					<div class="modal__container">
+						<div class="modal__header modal__header-info">
+						</div>
+						<div class="modal__content">
+							<p class="modal__title">Информационное сообщение</p>
+							<p class="modal__text">Поля "Откуда" и "Куда" обязательны для заполнения</p>
+						</div>
+						<div class="modal__footer"><button class="modal__btn" type="button">Понятно</button>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 		</header>
 
 		<main class="order-page order">
@@ -161,7 +164,7 @@
 									</fieldset>
 								</div>
 								<div class="filter__switch switch">
-									
+
 									<div class="switch__component">
 										<div class="switch__image">
 											<img src="../icons/Cope.svg">
@@ -247,7 +250,7 @@
 											class="ant-switch switch__btn css-usln0u">
 											<div class="ant-switch-handle"></div><span class="ant-switch-inner"><span
 													class="ant-switch-inner-checked"></span>
-													<img src="../icons/Group 2 (1).svg">
+												<img src="../icons/Group 2 (1).svg">
 												<span class="ant-switch-inner-unchecked"></span>
 											</span>
 										</button>
@@ -285,7 +288,7 @@
 											role="slider" aria-valuemin="0" aria-valuemax="9999" aria-valuenow="9999"
 											aria-disabled="false" aria-orientation="horizontal"
 											style="left: 100%; transform: translateX(-50%);"></div> -->
-										
+
 									</div>
 									<div class="ant-slider-mark">
 										<span class="ant-slider-mark-text ant-slider-mark-text-active">0</span>
@@ -368,69 +371,7 @@
 										<img src="../icons/Subtract (2).svg">
 										<p class="filter__period-title">Обратно</p>
 										<img src="../icons/Group 11.2 (1).svg">
-										<!-- <input class="filter__period-btn" id="period-btn-arrival" type="checkbox"><label
-											for="period-btn-arrival"></label> -->
-										<!-- <div class="filter__period-content">
-											<p class="filter__period-subtitle arrival-subtitle-left">Время отправления
-											</p>
-											<div
-												class="ant-slider css-usln0u ant-slider-horizontal ant-slider-with-marks">
-												<div class="ant-slider-rail"></div>
-												<div class="ant-slider-track ant-slider-track-1"
-													style="left: 0%; width: 100%;"></div>
-												<div class="ant-slider-step">
-													<span class="ant-slider-dot ant-slider-dot-active"
-														style="left: 0%; transform: translateX(-50%);"></span>
-													<span class="ant-slider-dot ant-slider-dot-active"
-														style="left: 100%; transform: translateX(-50%);"></span>
-												</div>
-												<div class="ant-slider-handle ant-slider-handle-1 ant-tooltip-open"
-													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
-													aria-valuenow="0" aria-disabled="false"
-													aria-orientation="horizontal"
-													style="left: 0%; transform: translateX(-50%);"></div>
-												<div class="ant-slider-handle ant-slider-handle-2 ant-tooltip-open"
-													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
-													aria-valuenow="24" aria-disabled="false"
-													aria-orientation="horizontal"
-													style="left: 100%; transform: translateX(-50%);"></div>
-												<div class="ant-slider-mark">
-													<span class="ant-slider-mark-text ant-slider-mark-text-active"
-														style="left: 0%; transform: translateX(-50%);">0:00</span>
-													<span class="ant-slider-mark-text ant-slider-mark-text-active"
-														style="left: 100%; transform: translateX(-50%);">24:00</span>
-												</div>
-											</div>
-											<p class="filter__period-subtitle arrival-subtitle-right">Время прибытия</p>
-											<div
-												class="ant-slider css-usln0u ant-slider-horizontal ant-slider-with-marks">
-												<div class="ant-slider-rail"></div>
-												<div class="ant-slider-track ant-slider-track-1"
-													style="left: 0%; width: 100%;"></div>
-												<div class="ant-slider-step"><span
-														class="ant-slider-dot ant-slider-dot-active"
-														style="left: 0%; transform: translateX(-50%);"></span>
-													<span class="ant-slider-dot ant-slider-dot-active"
-														style="left: 100%; transform: translateX(-50%);"></span>
-												</div>
-												<div class="ant-slider-handle ant-slider-handle-1 ant-tooltip-open"
-													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
-													aria-valuenow="0" aria-disabled="false"
-													aria-orientation="horizontal"
-													style="left: 0%; transform: translateX(-50%);"></div>
-												<div class="ant-slider-handle ant-slider-handle-2 ant-tooltip-open"
-													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
-													aria-valuenow="24" aria-disabled="false"
-													aria-orientation="horizontal"
-													style="left: 100%; transform: translateX(-50%);"></div>
-												<div class="ant-slider-mark"><span
-														class="ant-slider-mark-text ant-slider-mark-text-active"
-														style="left: 0%; transform: translateX(-50%);">0:00</span>
-													<span class="ant-slider-mark-text ant-slider-mark-text-active"
-														style="left: 100%; transform: translateX(-50%);">24:00</span>
-												</div>
-											</div>
-										</div> -->
+
 									</div>
 								</div>
 							</div>
@@ -441,17 +382,17 @@
 										<div class="ticket-item__city">
 											<p class="ticket-item__from_city">санкт-Петербург</p>
 											<p class="ticket-item__to_city">самара</p>
-											
+
 										</div>
 										<div class="ticket-item__railway">
 											<p class="ticket-item__from_railway">Московский вокзал</p>
 											<p class="ticket-item__to_railway">Самара</p>
-											
+
 										</div>
 										<div class="ticket-item__options">
 											<img src="../icons/Group 2.2.svg">
 											<div class="ticket-item__option">
-												
+
 											</div>
 										</div>
 										<p class="ticket-item__cost">от<span class="ticket-item__cost-value">2500</span>
@@ -471,7 +412,7 @@
 											<img src="../icons/Group 2.2.svg">
 											<div class="ticket-item__option">
 											</div>
-									
+
 										</div>
 										<p class="ticket-item__cost">от<span class="ticket-item__cost-value">3650</span>
 											<span class="ticket-item__cost-currency">₽</span>
@@ -490,7 +431,7 @@
 											<img src="../icons/Group 2.2.svg">
 											<div class="ticket-item__option">
 											</div>
-											
+
 										</div>
 										<p class="ticket-item__cost">от<span class="ticket-item__cost-value">3200</span>
 											<span class="ticket-item__cost-currency">₽</span>
@@ -525,8 +466,8 @@
 										</div>
 										<div class="ticket-item__options">
 											<img src="../icons/Group 2.2.svg">
-											<div class="ticket-item__option">											
-											</div>										
+											<div class="ticket-item__option">
+											</div>
 										</div>
 										<p class="ticket-item__cost">от<span class="ticket-item__cost-value">3500</span>
 											<span class="ticket-item__cost-currency">₽</span>
@@ -538,9 +479,9 @@
 
 
 
-			
 
-                        <div class="order-results">
+
+						<div class="order-results">
 							<div class="order-results__control result-control">
 								<p>найдено:&nbsp;&nbsp;<span class="result-control__find-value">0</span></p>
 								<div class="result-control__sort">
@@ -575,7 +516,8 @@
 								<div class="number-train-selection">
 									<div class="train-route">
 										<div class="train name">
-											<span class="train-name-image"><img src="../icons/trainlight.svg" alt=""></span>								
+											<span class="train-name-image"><img src="../icons/trainlight.svg"
+													alt=""></span>
 											<h1 class="train-number">116C</h1>
 											<div class="train-name-selection">
 												<p class="train-name-city">Москва →</p>
@@ -589,19 +531,19 @@
 													<div class="selection-time">09:13</div>
 													<div class="selection-from">
 														<h1 class="selection-city">Москва</h1>
-														<p class="selection-station">Ленинградский вокзал</p>	
-													</div> 
+														<p class="selection-station">Ленинградский вокзал</p>
+													</div>
 
 													<div class="selection-time">00:13</div>
 													<div class="selection-from">
 														<h1 class="selection-city">Cанкт-Петербург</h1>
-														<p class="selection-station">Московский вокзал</p>	
-													</div> 
+														<p class="selection-station">Московский вокзал</p>
+													</div>
 												</div>
 												<div class="train__selection-time">
 													<p class="travel__time">08:32</p>
 													<span class="selection__arrow"></span>
-													
+
 													<p class="travel__time travel__time-2line">08:38</p>
 													<span class="selection__arrow selection__arrow-rotate"></span>
 												</div>
@@ -609,50 +551,50 @@
 													<div class="selection-time">09:13</div>
 													<div class="direction__to">
 														<h1 class="direction-city">Москва</h1>
-														<p class="direction-station">Ленинградский вокзал</p>	
+														<p class="direction-station">Ленинградский вокзал</p>
 													</div>
 
 													<div class="selection-time">09:13</div>
 													<div class="direction__to">
 														<h1 class="direction-city">Москва</h1>
-														<p class="direction-station">Ленинградский вокзал</p>	
+														<p class="direction-station">Ленинградский вокзал</p>
 													</div>
 												</div>
 
-											<div class="train__tickets">
-												<div class="ticket-options">
-													<span class="ticket-options_class">Плацкарт</span>
-													<span class="ticket-options_amount">22</span>
-													<span class="ticket-options_price">
-														<span>от</span>
-														<span class="ticket-options_price_number">3 805</span>
-														<span class="ticket-options_price_rub">₽</span>
-													</span>
+												<div class="train__tickets">
+													<div class="ticket-options">
+														<span class="ticket-options_class">Плацкарт</span>
+														<span class="ticket-options_amount">22</span>
+														<span class="ticket-options_price">
+															<span>от</span>
+															<span class="ticket-options_price_number">3 805</span>
+															<span class="ticket-options_price_rub">₽</span>
+														</span>
 
-													<span class="ticket-options_class">Сидячий</span>
-													<span class="ticket-options_amount">02</span>
-													<span class="ticket-options_price">
-														<span>от</span>
-														<span class="ticket-options_price_number">3 805</span>
-														<span class="ticket-options_price_rub">₽</span>
-													</span>
+														<span class="ticket-options_class">Сидячий</span>
+														<span class="ticket-options_amount">02</span>
+														<span class="ticket-options_price">
+															<span>от</span>
+															<span class="ticket-options_price_number">3 805</span>
+															<span class="ticket-options_price_rub">₽</span>
+														</span>
 
-													<span class="ticket-options_class">Купе</span>
-													<span class="ticket-options_amount">48</span>
-													<span class="ticket-options_price">
-														<span>от</span>
-														<span class="ticket-options_price_number">3 805</span>
-														<span class="ticket-options_price_rub">₽</span>
-													</span>
+														<span class="ticket-options_class">Купе</span>
+														<span class="ticket-options_amount">48</span>
+														<span class="ticket-options_price">
+															<span>от</span>
+															<span class="ticket-options_price_number">3 805</span>
+															<span class="ticket-options_price_rub">₽</span>
+														</span>
 
-													<span class="ticket-options_class">Люкс</span>
-													<span class="ticket-options_amount">25</span>
-													<span class="ticket-options_price">
-														<span>от</span>
-														<span class="ticket-options_price_number">3 805</span>
-														<span class="ticket-options_price_rub">₽</span>
-													</span>
-												</div>
+														<span class="ticket-options_class">Люкс</span>
+														<span class="ticket-options_amount">25</span>
+														<span class="ticket-options_price">
+															<span>от</span>
+															<span class="ticket-options_price_number">3 805</span>
+															<span class="ticket-options_price_rub">₽</span>
+														</span>
+													</div>
 
 
 													<div class="train__facilities">
@@ -660,7 +602,8 @@
 														<span class="train__facilities-express"></span>
 														<span class="facilities__coffee-have"></span>
 													</div>
-													<button type="button" class="train__choice-btn">Выбрать места</button>
+													<button type="button" class="train__choice-btn">Выбрать
+														места</button>
 
 												</div>
 
@@ -674,7 +617,8 @@
 								<div class="number-train-selection">
 									<div class="train-route">
 										<div class="train name">
-											<span class="train-name-image"><img src="../icons/trainlight.svg" alt=""></span>								
+											<span class="train-name-image"><img src="../icons/trainlight.svg"
+													alt=""></span>
 											<h1 class="train-number">020У</h1>
 											<div class="train-name-selection">
 												<p class="train-name-city">Москва →</p>
@@ -688,8 +632,8 @@
 													<div class="selection-time">00:20</div>
 													<div class="selection-from">
 														<h1 class="selection-city">Москва</h1>
-														<p class="selection-station">Ленинградский вокзал</p>	
-													</div> 
+														<p class="selection-station">Ленинградский вокзал</p>
+													</div>
 												</div>
 												<div class="train__selection-time">
 													<p class="travel__time">08:39</p>
@@ -699,7 +643,7 @@
 													<div class="selection-time">09:59</div>
 													<div class="direction__to">
 														<h1 class="direction-city">Cанкт-Петербург</h1>
-														<p class="direction-station">Московский вокзал</p>	
+														<p class="direction-station">Московский вокзал</p>
 													</div>
 												</div>
 
@@ -739,21 +683,22 @@
 														</span>
 													</div>
 
-												
+
 
 													<div class="train__facilities">
 														<span class="train__facilities-wifi"></span>
 														<span class="train__facilities-express"></span>
 														<span class="facilities__coffee-have"></span>
 													</div>
-													<button type="button" class="train__choice-btn">Выбрать места</button>
+													<button type="button" class="train__choice-btn">Выбрать
+														места</button>
 
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>		
+							</div>
 							<!-- Результаты поиска END -->
 
 							<div class="order-results__wrapper">
@@ -821,8 +766,10 @@
 					<div class="footer-subscribe">
 						<p class="subscribe-title">Подписка</p>
 						<p class="subscribe-subtitle">Будьте в курсе событий</p>
-						<input type="text" placeholder="e-mail" />
-						<button type="submit">ОТПРАВИТЬ</button>
+						<div>
+							<input type="text" placeholder="e-mail" />
+							<button type="submit">ОТПРАВИТЬ</button>
+						</div>
 					</div>
 					<div class="social-media-communication">
 						<p class="subscribe-title">Подписывайтесь на нас</p>
@@ -872,5 +819,6 @@
 			</div>
 		</footer>
 
-	</body>
+</body>
+
 </html>
