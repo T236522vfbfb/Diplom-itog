@@ -5,7 +5,12 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Система бронирования ж/д билетов</title>
+
+	<link rel="stylesheet" href="../js/air-datepicker-3.5.3/dist/air-datepicker.css">
 	<link rel="stylesheet" href="../css/style.css" />
+
+	<script src="../js/air-datepicker-3.5.3/dist/air-datepicker.js"></script>
+	<script type="module" src="../js/script.js"></script>
 </head>
 
 <body>
@@ -165,96 +170,120 @@
 								</div>
 								<div class="filter__switch switch">
 
-									<div class="switch__component">
-										<div class="switch__image">
-											<img src="../icons/Cope.svg">
-										</div>
-										<span class="switch__title">Купе</span>
-										<button data-name="have_second_class" type="button" role="switch"
-											aria-checked="false" class="ant-switch switch__btn css-usln0u">
-											<div class="ant-switch-handle"></div>
-											<span class="ant-switch-inner">
-												<span class="ant-switch-inner-checked">
-													<img src="../icons/orange cerl.svg">
-												</span>
-												<span class="ant-switch-inner-unchecked"></span>
-											</span>
-										</button>
-									</div>
-									<div class="switch__component">
-										<div class="switch__image">
-											<img src="../icons/plackart.svg">
-										</div>
-										<span class="switch__title">Плацкарт</span>
-										<button data-name="have_third_class" type="button" role="switch"
-											aria-checked="false" class="ant-switch switch__btn css-usln0u">
-											<div class="ant-switch-handle"></div>
-											<span class="ant-switch-inner">
-												<span class="ant-switch-inner-checked"></span>
-												<img src="../icons/Group 2 (1).svg">
-												<span class="ant-switch-inner-unchecked"></span>
-											</span>
-										</button>
-									</div>
-									<div class="switch__component">
-										<div class="switch__image">
-											<img src="../icons/setdayn.svg">
-										</div>
-										<span class="switch__title">Сидячий</span>
-										<button data-name="have_fourth_class" type="button" role="switch"
-											aria-checked="false" class="ant-switch switch__btn css-usln0u">
-											<div class="ant-switch-handle"></div>
-											<span class="ant-switch-inner">
-												<span class="ant-switch-inner-checked"></span>
-												<img src="../icons/Group 2 (1).svg">
-												<span class="ant-switch-inner-unchecked"></span>
-											</span>
-										</button>
-									</div>
-									<div class="switch__component">
+									<div class="switch__component" id="switch-lucs">
 										<div class="switch__image">
 											<img src="../icons/lucs.svg">
 										</div>
-										<span class="switch__title">Люкс</span>
-										<button data-name="have_first_class" type="button" role="switch"
-											aria-checked="false" class="ant-switch switch__btn css-usln0u">
-											<div class="ant-switch-handle"></div>
-											<span class="ant-switch-inner">
-												<span class="ant-switch-inner-checked"></span>
-												<img src="../icons/Group 2 (1).svg">
-												<span class="ant-switch-inner-unchecked"></span>
+
+										<label for="switch-input" class="switch__title">Люкс
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+										</label>
+										
+										<div class="switch-button">
+											<span class="ant-switch-inner-checked" style="display: none;">
+												<img src="../icons/orange cerl.svg">
 											</span>
-										</button>
+											<span class="ant-switch-inner-unchecked">
+												<img src="../icons/Group 2 (1).svg">
+											</span>
+										</div>
 									</div>
-									<div class="switch__component">
+
+									<div class="switch__component" id="switch-cupe">
+										<div class="switch__image">
+											<img src="../icons/Cope.svg">
+										</div>
+
+										<label for="switch-input" class="switch__title">Купе
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+										</label>
+										
+										<div class="switch-button">
+											<span class="ant-switch-inner-checked" style="display: none;">
+												<img src="../icons/orange cerl.svg">
+											</span>
+											<span class="ant-switch-inner-unchecked">
+												<img src="../icons/Group 2 (1).svg">
+											</span>
+										</div>
+									</div>
+
+									<div class="switch__component" id="switch-plackart">
+										<div class="switch__image">
+											<img src="../icons/plackart.svg">
+										</div>
+
+										<label for="switch-input" class="switch__title">Плацкарт
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+										</label>
+										
+										<div class="switch-button">
+											<span class="ant-switch-inner-checked" style="display: none;">
+												<img src="../icons/orange cerl.svg">
+											</span>
+											<span class="ant-switch-inner-unchecked">
+												<img src="../icons/Group 2 (1).svg">
+											</span>
+										</div>
+									</div>
+
+									<div class="switch__component" id="switch-setdayn">
+										<div class="switch__image">
+											<img src="../icons/setdayn.svg">
+										</div>
+
+										<label for="switch-input" class="switch__title">Сидячий
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+										</label>
+										
+										<div class="switch-button">
+											<span class="ant-switch-inner-checked" style="display: none;">
+												<img src="../icons/orange cerl.svg">
+											</span>
+											<span class="ant-switch-inner-unchecked">
+												<img src="../icons/Group 2 (1).svg">
+											</span>
+										</div>
+									</div>
+
+									<div class="switch__component" id="switch-wifi">
 										<div class="switch__image">
 											<img src="../icons/wifi.svg">
 										</div>
-										<span class="switch__title">Wi-Fi</span>
-										<button data-name="have_wifi" type="button" role="switch" aria-checked="false"
-											class="ant-switch switch__btn css-usln0u">
-											<div class="ant-switch-handle"></div>
-											<span class="ant-switch-inner">
-												<span class="ant-switch-inner-checked"></span>
+
+										<label for="switch-input" class="switch__title">Wi-Fi
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+										</label>
+										
+										<div class="switch-button">
+											<span class="ant-switch-inner-checked" style="display: none;">
 												<img src="../icons/orange cerl.svg">
-												<span class="ant-switch-inner-unchecked"></span>
 											</span>
-										</button>
+											<span class="ant-switch-inner-unchecked">
+												<img src="../icons/Group 2 (1).svg">
+											</span>
+										</div>
 									</div>
-									<div class="switch__component">
+
+									<div class="switch__component" id="switch-camolet">
 										<div class="switch__image">
 											<img src="../icons/camolet.svg">
 										</div>
-										<span class="switch__title">Экспресс</span>
-										<button data-name="is_express" type="button" role="switch" aria-checked="false"
-											class="ant-switch switch__btn css-usln0u">
-											<div class="ant-switch-handle"></div><span class="ant-switch-inner"><span
-													class="ant-switch-inner-checked"></span>
-												<img src="../icons/Group 2 (1).svg">
-												<span class="ant-switch-inner-unchecked"></span>
+
+										<label for="switch-input" class="switch__title">Экспресс
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+										</label>
+										
+										<div class="switch-button">
+											<span class="ant-switch-inner-checked" style="display: none;">
+												<img src="../icons/orange cerl.svg">
 											</span>
-										</button>
+											<span class="ant-switch-inner-unchecked">
+												<img src="../icons/Group 2 (1).svg">
+											</span>
+										</div>
 									</div>
+
 								</div>
 								<div class="filter__price price">
 									<p class="price__title">Стоимость</p>
@@ -515,7 +544,7 @@
 								<!-- Карточка поезда -->
 								<div class="number-train-selection">
 									<div class="train-route">
-										<div class="train name">
+										<div class="train-name">
 											<span class="train-name-image"><img src="../icons/trainlight.svg"
 													alt=""></span>
 											<h1 class="train-number">116C</h1>
@@ -616,7 +645,7 @@
 								<!-- Карточка поезда -->
 								<div class="number-train-selection">
 									<div class="train-route">
-										<div class="train name">
+										<div class="train-name">
 											<span class="train-name-image"><img src="../icons/trainlight.svg"
 													alt=""></span>
 											<h1 class="train-number">020У</h1>
