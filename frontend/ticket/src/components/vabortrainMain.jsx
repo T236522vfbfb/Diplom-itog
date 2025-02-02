@@ -1,126 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+import HeaderNav from './HeaderNav';
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Система бронирования ж/д билетов</title>
-
-	<link rel="stylesheet" href="../js/air-datepicker-3.5.3/dist/air-datepicker.css">
-	<link rel="stylesheet" href="../css/style.css" />
-
-	<script src="../js/air-datepicker-3.5.3/dist/air-datepicker.js"></script>
-	<script type="module" src="../js/script.js"></script>
-</head>
-
-<body>
-	<section class="arial">
-		<header class="header-train">
-			
-			<!--Лого полоска с логотипом-->
-			<section class="logo-wrapper">
-				<div class="container">
-					<a class="header-logo">Лого</a>
-				</div>
-			</section>
-			<!--конец полоски с логотипом-->
-			<nav>
-				<div class="container">
-					<ul class="header-menu">
-						<li class="name">О нас</li>
-						<li class="name">Как это работает</li>
-						<li class="name">Отзывы</li>
-						<li class="name">Контакты</li>
-					</ul>
-				</div>
-			</nav>
-			
-			<div class="search-widget">
-
-				<form class="MainSearch-widget">
-					<fieldset class="direction">
-						<legend class="fieldset-legend">Направление</legend>
-
-						<div class="fieldset__input-wrapper">
-							<label class="fieldset__label">
-							</label>
-							<div>
-								<div class="ant-select-selector">
-									<span class="ant-select-selection-search">
-										<input placeholder="Москва" type="search" autocomplete="off"
-											class="ant-select-selection-search-input" id="rc_select_2">
-									</span>
-								</div>
-
-								<div class="city-list">
-									<ul>
-										<li>Москва</li>
-									</ul>
-								</div>
-
-							</div>
-						</div>
-
-						<div class="fieldset__btn">
-							<button class="fieldset-direction__btn" type="button"></button>
-						</div>
-
-						<div class="fieldset__input-wrapper">
-							<label for="to" class="fieldset__label">
-							</label>
-							<div class="">
-								<div class="ant-select-selector">
-									<span class="ant-select-selection-search">
-										<input type="search" autocomplete="off"
-											class="ant-select-selection-search-input">
-									</span>
-								</div>
-
-								<div class="city-list">
-									<ul>
-										<li>Москва</li>
-										<li>САНКТ-ПЕТЕРБУРГ</li>
-									</ul>
-								</div>
-
-							</div>
-						</div>
-					</fieldset>
-
-					<fieldset class="fieldset-date">
-						<legend class="fieldset-legend">Дата</legend>
-						<div class="fieldset__input-wrapper">
-							<label class="fieldset__label"></label>
-							<input placeholder="2024-12-28"
-								class="ant-select-selection-search-input fieldset__input-calendar" required="">
-						</div>
-						<div class="fieldset__input-wrapper">
-							<label class="fieldset__label"></label>
-							<input placeholder="ДД/ММ/ГГ"
-								class="ant-select-selection-search-input fieldset__input-calendar" required="">
-						</div>
-					</fieldset>
-				</form>
-
-				<div class="form__btn">
-					<button class="form__btn-send" type="button">Найти билеты</button>
-				</div>
-
-				<div class="modal__wrapper" style="display: none;">
-					<div class="modal__container">
-						<div class="modal__header modal__header-info">
-						</div>
-						<div class="modal__content">
-							<p class="modal__title">Информационное сообщение</p>
-							<p class="modal__text">Поля "Откуда" и "Куда" обязательны для заполнения</p>
-						</div>
-						<div class="modal__footer"><button class="modal__btn" type="button">Понятно</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-
+const VabortrainMain = () => {
+	return (
 		<main class="order-page order">
 			<div class="order-line line">
 				<div class="line__container">
@@ -158,7 +39,7 @@
 										<div class="fieldset__input-wrapper">
 											<label class="fieldset__label"></label>
 											<input placeholder="2025-01-01"
-												class="fieldset__input fieldset__input-thither" required="">
+												class="fieldset__input fieldset__input-thither" required="" />
 										</div>
 									</fieldset>
 									<fieldset class="filter__fieldset">
@@ -166,7 +47,7 @@
 										<div class="fieldset__input-wrapper">
 											<label class="fieldset__label"></label>
 											<input placeholder="ДД/ММ/ГГ" class="fieldset__input fieldset__input-back"
-												required="">
+												required="" />
 										</div>
 									</fieldset>
 								</div>
@@ -174,114 +55,114 @@
 
 									<div class="switch__component" id="switch-lucs">
 										<div class="switch__image">
-											<img src="../icons/lucs.svg">
+											<img src="../icons/lucs.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Люкс
-											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;" />
 										</label>
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg">
+												<img src="../icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg">
+												<img src="../icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
 
 									<div class="switch__component" id="switch-cupe">
 										<div class="switch__image">
-											<img src="../icons/Cope.svg">
+											<img src="../icons/Cope.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Купе
-											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;" />
 										</label>
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg">
+												<img src="../icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg">
+												<img src="../icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
 
 									<div class="switch__component" id="switch-plackart">
 										<div class="switch__image">
-											<img src="../icons/plackart.svg">
+											<img src="../icons/plackart.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Плацкарт
-											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;" />
 										</label>
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg">
+												<img src="../icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg">
+												<img src="../icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
 
 									<div class="switch__component" id="switch-setdayn">
 										<div class="switch__image">
-											<img src="../icons/setdayn.svg">
+											<img src="../icons/setdayn.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Сидячий
-											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none" />
 										</label>
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg">
+												<img src="../icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg">
+												<img src="../icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
 
 									<div class="switch__component" id="switch-wifi">
 										<div class="switch__image">
-											<img src="../icons/wifi.svg">
+											<img src="../icons/wifi.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Wi-Fi
-											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;" />
 										</label>
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg">
+												<img src="../icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg">
+												<img src="../icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
 
 									<div class="switch__component" id="switch-camolet">
 										<div class="switch__image">
-											<img src="../icons/camolet.svg">
+											<img src="../icons/camolet.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Экспресс
-											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;">
+											<input type="checkbox" class="switch-input" name="switch-input" hidden style="display: none;" />
 										</label>
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg">
+												<img src="../icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg">
+												<img src="../icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
@@ -294,31 +175,10 @@
 										<p>до</p>
 									</div>
 									<div class="slider">
-										<img src="../icons/slider/Rectangle 3.svg" class="filter__price-rectangle-1">
-										<img src="../icons/slider/Rectangle 3.8.svg" class="filter__price-rectangle-2">
-										<img src="../icons/slider/Ellipse 2.8.svg" class="filter__price-ellipse-1">
-										<img src="../icons/slider/Ellipse 2.8.svg" class="filter__price-ellipse-2">
-										<!-- <div class="ant-slider-rail">
-										</div>
-										<div class="ant-slider-track ant-slider-track-1" style="left: 0%; width: 100%;">
-										</div>
-										<div class="ant-slider-step">
-
-
-								
-											<span class="ant-slider-dot ant-slider-dot-active"
-												style="left: 0%; transform: translateX(-50%);"></span>
-											<span class="ant-slider-dot ant-slider-dot-active"
-												style="left: 100%; transform: translateX(-50%);"></span>
-										</div>
-										<div class="ant-slider-handle ant-slider-handle-1 ant-tooltip-open" tabindex="0"
-											role="slider" aria-valuemin="0" aria-valuemax="9999" aria-valuenow="0"
-											aria-disabled="false" aria-orientation="horizontal"
-											style="left: 0%; transform: translateX(-50%);"></div>
-										<div class="ant-slider-handle ant-slider-handle-2 ant-tooltip-open" tabindex="0"
-											role="slider" aria-valuemin="0" aria-valuemax="9999" aria-valuenow="9999"
-											aria-disabled="false" aria-orientation="horizontal"
-											style="left: 100%; transform: translateX(-50%);"></div> -->
+										<img src="../icons/slider/Rectangle 3.svg" class="filter__price-rectangle-1" />
+										<img src="../icons/slider/Rectangle 3.8.svg" class="filter__price-rectangle-2" />
+										<img src="../icons/slider/Ellipse 2.8.svg" class="filter__price-ellipse-1" />
+										<img src="../icons/slider/Ellipse 2.8.svg" class="filter__price-ellipse-2" />
 
 									</div>
 									<div class="ant-slider-mark">
@@ -328,80 +188,17 @@
 								</div>
 								<div class="filter__period period-departure">
 									<div class="filter__period-control">
-										<img src="../icons/Subtract (1).svg">
+										<img src="../icons/Subtract (1).svg" />
 										<p class="filter__period-title">Туда</p>
-										<img src="../icons/Group 11.2 (1).svg">
-										<!-- <input class="filter__period-btn" id="period-btn-departure" type="checkbox">
-										<label for="period-btn-departure"></label> -->
-										<!-- <div class="filter__period-content">
-											<p class="filter__period-subtitle departure-subtitle-left">Время отправления
-											</p>
-											<div
-												class="ant-slider css-usln0u ant-slider-horizontal ant-slider-with-marks">
-												<div class="ant-slider-rail">
-												</div>
-												<div class="ant-slider-track ant-slider-track-1"
-													style="left: 0%; width: 100%;"></div>
-												<div class="ant-slider-step">
-													<span class="ant-slider-dot ant-slider-dot-active"
-														style="left: 0%; transform: translateX(-50%);"></span>
-													<span class="ant-slider-dot ant-slider-dot-active"
-														style="left: 100%; transform: translateX(-50%);"></span>
-												</div>
-												<div class="ant-slider-handle ant-slider-handle-1 ant-tooltip-open"
-													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
-													aria-valuenow="0" aria-disabled="false"
-													aria-orientation="horizontal"
-													style="left: 0%; transform: translateX(-50%);"></div>
-												<div class="ant-slider-handle ant-slider-handle-2 ant-tooltip-open"
-													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
-													aria-valuenow="24" aria-disabled="false"
-													aria-orientation="horizontal"
-													style="left: 100%; transform: translateX(-50%);"></div>
-												<div class="ant-slider-mark">
-													<span class="ant-slider-mark-text ant-slider-mark-text-active"
-														style="left: 0%; transform: translateX(-50%);">0:00</span>
-													<span class="ant-slider-mark-text ant-slider-mark-text-active"
-														style="left: 100%; transform: translateX(-50%);">24:00</span>
-												</div>
-											</div>
-											<p class="filter__period-subtitle departure-subtitle-right">Время прибытия</p>
-											<div
-												class="ant-slider css-usln0u ant-slider-horizontal ant-slider-with-marks">
-												<div class="ant-slider-rail"></div>
-												<div class="ant-slider-track ant-slider-track-1"
-													style="left: 0%; width: 100%;"></div>
-												<div class="ant-slider-step"><span
-														class="ant-slider-dot ant-slider-dot-active"
-														style="left: 0%; transform: translateX(-50%);"></span>
-													<span class="ant-slider-dot ant-slider-dot-active"
-														style="left: 100%; transform: translateX(-50%);"></span>
-												</div>
-												<div class="ant-slider-handle ant-slider-handle-1 ant-tooltip-open"
-													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
-													aria-valuenow="0" aria-disabled="false"
-													aria-orientation="horizontal"
-													style="left: 0%; transform: translateX(-50%);"></div>
-												<div class="ant-slider-handle ant-slider-handle-2 ant-tooltip-open"
-													tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="24"
-													aria-valuenow="24" aria-disabled="false"
-													aria-orientation="horizontal"
-													style="left: 100%; transform: translateX(-50%);"></div>
-												<div class="ant-slider-mark">
-													<span class="ant-slider-mark-text ant-slider-mark-text-active"
-														style="left: 0%; transform: translateX(-50%);">0:00</span>
-													<span class="ant-slider-mark-text ant-slider-mark-text-active"
-														style="left: 100%; transform: translateX(-50%);">24:00</span>
-												</div>
-											</div>
-										</div> -->
+										<img src="../icons/Group 11.2 (1).svg" />
+										
 									</div>
 								</div>
 								<div class="filter__period period-arrival">
 									<div class="filter__period-control">
-										<img src="../icons/Subtract (2).svg">
+										<img src="../icons/Subtract (2).svg" />
 										<p class="filter__period-title">Обратно</p>
-										<img src="../icons/Group 11.2 (1).svg">
+										<img src="../icons/Group 11.2 (1).svg" />
 
 									</div>
 								</div>
@@ -421,7 +218,7 @@
 
 										</div>
 										<div class="ticket-item__options">
-											<img src="../icons/Group 2.2.svg">
+											<img src="../icons/Group 2.2.svg" />
 											<div class="ticket-item__option">
 
 											</div>
@@ -440,7 +237,7 @@
 											<p class="ticket-item__to_railway">Казань</p>
 										</div>
 										<div class="ticket-item__options">
-											<img src="../icons/Group 2.2.svg">
+											<img src="../icons/Group 2.2.svg" />
 											<div class="ticket-item__option">
 											</div>
 
@@ -459,7 +256,7 @@
 											<p class="ticket-item__to_railway">Аткарск</p>
 										</div>
 										<div class="ticket-item__options">
-											<img src="../icons/Group 2.2.svg">
+											<img src="../icons/Group 2.2.svg" />
 											<div class="ticket-item__option">
 											</div>
 
@@ -478,7 +275,7 @@
 											<p class="ticket-item__to_railway">Анапа</p>
 										</div>
 										<div class="ticket-item__options">
-											<img src="../icons/Group 2.2.svg">
+											<img src="../icons/Group 2.2.svg" />
 											<div class="ticket-item__option">
 											</div>
 										</div>
@@ -496,7 +293,7 @@
 											<p class="ticket-item__to_railway">Агрыз</p>
 										</div>
 										<div class="ticket-item__options">
-											<img src="../icons/Group 2.2.svg">
+											<img src="../icons/Group 2.2.svg" />
 											<div class="ticket-item__option">
 											</div>
 										</div>
@@ -507,24 +304,19 @@
 								</div>
 							</div>
 						</div>
-
-
-
-
-
 						<div class="order-results">
 							<div class="order-results__control result-control">
 								<p>найдено:&nbsp;&nbsp;<span class="result-control__find-value">0</span></p>
 								<div class="result-control__sort">
 									<p>сортировать по:&nbsp;&nbsp;</p>
 									<div class="result-control__select"><input class="result-control__select-btn"
-											type="button" data-value="date" value="времени">
+											type="button" data-value="date" value="времени" />
 										<div class="result-control__options"><input class="result-control__option"
-												type="button" data-value="date" value="времени">
+												type="button" data-value="date" value="времени" />
 											<input class="result-control__option" type="button" data-value="price"
-												value="стоимости">
+												value="стоимости" />
 											<input class="result-control__option" type="button" data-value="duration"
-												value="длительности">
+												value="длительности" />
 										</div>
 									</div>
 								</div>
@@ -539,16 +331,12 @@
 								</div>
 							</div>
 
-
-							<!-- Результаты поиска  START -->
 							<div class="train-list">
-
-								<!-- Карточка поезда -->
 								<div class="number-train-selection">
 									<div class="train-route">
 										<div class="train-name">
 											<span class="train-name-image"><img src="../icons/trainlight.svg"
-													alt=""></span>
+													alt="" /></span>
 											<h1 class="train-number">116C</h1>
 											<div class="train-name-selection">
 												<p class="train-name-city">Москва →</p>
@@ -642,14 +430,11 @@
 										</div>
 									</div>
 								</div>
-
-
-								<!-- Карточка поезда -->
 								<div class="number-train-selection">
 									<div class="train-route">
 										<div class="train-name">
 											<span class="train-name-image"><img src="../icons/trainlight.svg"
-													alt=""></span>
+													alt="" /></span>
 											<h1 class="train-number">020У</h1>
 											<div class="train-name-selection">
 												<p class="train-name-city">Москва →</p>
@@ -730,8 +515,7 @@
 									</div>
 								</div>
 							</div>
-							<!-- Результаты поиска END -->
-
+	
 							<div class="order-results__wrapper">
 								<div class="order-pagination">
 
@@ -758,98 +542,7 @@
 				</div>
 			</div>
 		</main>
+	);
+};
 
-		<!--футер-->
-		<footer class="footer" id="footer-contact">
-			<div class="container footer-container">
-				<div class="footer-contact contact">
-					<p class="сontact-title">Свяжитесь с нами</p>
-					<ul class="contact-list">
-						<li class="contact-item">
-							<a class="contact-link" href="tel:8 (800) 000 00 00" target="_blank">
-								<img src="../icons/Footer phone.svg" alt="Телефон" class="contact-image" />
-								<p class="contact-desk">8 (800) 000 00 00</p>
-							</a>
-						</li>
-						<li class="contact-item">
-							<a class="contact-link" href="mailto:inbox@mail.ru" target="_blank">
-								<img src="../icons/footer-mail.svg" alt="Email" class="contact-image" />
-								<p class="contact-desk">inbox@mail.ru</p>
-							</a>
-						</li>
-						<li class="contact-item">
-							<a class="contact-link" href="Skype" target="_blank">
-								<img src="../icons/footer-skype.svg" alt="Skype" class="contact-image" />
-								<p class="contact-desk">tu.train.tickets</p>
-							</a>
-						</li>
-
-						<li class="contact-item">
-							<div class="contact-link">
-								<img src="../icons/footer-Vector.svg" style="margin-right: 10px;" alt="Адрес на карте"
-									class="contact-image" />
-								<p class="contact-desk">г. Москва <br>ул. Московская <br>27-35 555 555</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="footer-subscribe_col2">
-					<div class="footer-subscribe">
-						<p class="subscribe-title">Подписка</p>
-						<p class="subscribe-subtitle">Будьте в курсе событий</p>
-						<div>
-							<input type="text" placeholder="e-mail" />
-							<button type="submit">ОТПРАВИТЬ</button>
-						</div>
-					</div>
-					<div class="social-media-communication">
-						<p class="subscribe-title">Подписывайтесь на нас</p>
-						<ul class="media-social-link">
-							<li class="subscribe-social-item">
-								<a class="social-link" href="https://www.youtube.com"><img
-										src="../icons/footer-youtube.svg" alt="YouTube" /></a>
-							</li>
-							<li class="subscribe-social-item">
-								<a class="social-link" href="https://www.linkedin.com"><img src="../icons/footer-in.svg"
-										alt="LinkedIn" /></a>
-							</li>
-							<li class="subscribe-social-item">
-								<a class="social-link" href="https://www.google.com"><img src="../icons/footer-G.svg"
-										alt="Google+" /></a>
-							</li>
-							<li class="subscribe-social-item">
-								<a class="social-link" href="https://www.facebook.com"><img src="../icons/footer-F.svg"
-										alt="Facebook" /></a>
-							</li>
-							<li class="subscribe-social-item">
-								<a class="social-link" href="https://twitter.com"><img src="../icons/footer-Twit.svg"
-										alt="Twitter" /></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="decorate-line">
-				<section class="line">
-					<span class="strip-bar"></span>
-				</section>
-
-				<div class="container">
-					<div class="footer-copyright">
-						<div class="container-copyright">
-							<a class="copyright-logo-link" href="">Лого</a>
-
-							<button class="copyright-btn" type="button"><img src="../icons/footer-arrow.svg"
-									alt="Стрелка" /></button>
-
-							<p class="copyright-info">2024 WEB</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-</body>
-
-</html>
+export default VabortrainMain;
