@@ -1,13 +1,13 @@
-import Footerphone from './assets/icons/Footerphone.svg';
-import footerarrow from './assets/icons/footer-arrow.svg';
-import footerF from './assets/icons/footer-F.svg';
-import footerG from './assets/icons/footer-G.svg';
-import footerin from './assets/icons/footer-n.svg';
-import footermail from './assets/icons/footer-mail.svg';
-import footerskype from './assets/icons/footer-skype.svg';
-import footerTwit from './assets/icons/footer-Twit.svg';
-import footerVector from './assets/icons/footer-Vector.svg';
-import footeryoutube from './assets/icons/footer-youtube.svg';
+import Footerphone from '../assets/icons/Footer phone.svg';
+import footerarrow from '../assets/icons/footer-arrow.svg';
+import footerF from '../assets/icons/footer-F.svg';
+import footerG from '../assets/icons/footer-G.svg';
+import footerin from '../assets/icons/footer-in.svg';
+import footermail from '../assets/icons/footer-mail.svg';
+import footerskype from '../assets/icons/footer-skype.svg';
+import footerTwit from '../assets/icons/footer-Twit.svg';
+import footerVector from '../assets/icons/footer-Vector.svg';
+import footeryoutube from '../assets/icons/footer-youtube.svg';
 
 
 const Footer = () => {

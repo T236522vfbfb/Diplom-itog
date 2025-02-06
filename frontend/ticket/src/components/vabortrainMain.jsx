@@ -1,4 +1,6 @@
-import HeaderNav from './HeaderNav';
+import TrainCardSelection from './TrainCardSelection';
+// import { useState, useEffect } from 'react';
+import TrainList from TrainList
 
 const VabortrainMain = () => {
 	return (
@@ -55,7 +57,7 @@ const VabortrainMain = () => {
 
 									<div class="switch__component" id="switch-lucs">
 										<div class="switch__image">
-											<img src="../icons/lucs.svg" />
+											<img src="../assets/icons/lucs.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Люкс
@@ -64,17 +66,17 @@ const VabortrainMain = () => {
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg" />
+												<img src="../assets/icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg" />
+												<img src="../assets/icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
 
 									<div class="switch__component" id="switch-cupe">
 										<div class="switch__image">
-											<img src="../icons/Cope.svg" />
+											<img src="../assets/icons/Cope.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Купе
@@ -83,17 +85,17 @@ const VabortrainMain = () => {
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg" />
+												<img src="../assets/icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg" />
+												<img src="../assets/icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
 
 									<div class="switch__component" id="switch-plackart">
 										<div class="switch__image">
-											<img src="../icons/plackart.svg" />
+											<img src="../assets/icons/plackart.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Плацкарт
@@ -102,17 +104,17 @@ const VabortrainMain = () => {
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg" />
+												<img src="../assets/icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg" />
+												<img src="../assets/icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
 
 									<div class="switch__component" id="switch-setdayn">
 										<div class="switch__image">
-											<img src="../icons/setdayn.svg" />
+											<img src="../assets/icons/setdayn.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Сидячий
@@ -121,17 +123,17 @@ const VabortrainMain = () => {
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg" />
+												<img src="../assets/icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg" />
+												<img src="../assets/icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
 
 									<div class="switch__component" id="switch-wifi">
 										<div class="switch__image">
-											<img src="../icons/wifi.svg" />
+											<img src="../assets/icons/wifi.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Wi-Fi
@@ -140,17 +142,17 @@ const VabortrainMain = () => {
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg" />
+												<img src="../assets/icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg" />
+												<img src="../assets/icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
 
 									<div class="switch__component" id="switch-camolet">
 										<div class="switch__image">
-											<img src="../icons/camolet.svg" />
+											<img src="../assets/icons/camolet.svg" />
 										</div>
 
 										<label for="switch-input" class="switch__title">Экспресс
@@ -159,10 +161,10 @@ const VabortrainMain = () => {
 										
 										<div class="switch-button">
 											<span class="ant-switch-inner-checked" style="display: none;">
-												<img src="../icons/orange cerl.svg" />
+												<img src="../assets/icons/orange cerl.svg" />
 											</span>
 											<span class="ant-switch-inner-unchecked">
-												<img src="../icons/Group 2 (1).svg" />
+												<img src="../assets/icons/Group 2 (1).svg" />
 											</span>
 										</div>
 									</div>
@@ -175,10 +177,10 @@ const VabortrainMain = () => {
 										<p>до</p>
 									</div>
 									<div class="slider">
-										<img src="../icons/slider/Rectangle 3.svg" class="filter__price-rectangle-1" />
-										<img src="../icons/slider/Rectangle 3.8.svg" class="filter__price-rectangle-2" />
-										<img src="../icons/slider/Ellipse 2.8.svg" class="filter__price-ellipse-1" />
-										<img src="../icons/slider/Ellipse 2.8.svg" class="filter__price-ellipse-2" />
+										<img src="../assets/icons/slider/Rectangle 3.svg" class="filter__price-rectangle-1" />
+										<img src="../assets/icons/slider/Rectangle 3.8.svg" class="filter__price-rectangle-2" />
+										<img src="../assets/icons/slider/Ellipse 2.8.svg" class="filter__price-ellipse-1" />
+										<img src="../assets/icons/slider/Ellipse 2.8.svg" class="filter__price-ellipse-2" />
 
 									</div>
 									<div class="ant-slider-mark">
@@ -188,17 +190,17 @@ const VabortrainMain = () => {
 								</div>
 								<div class="filter__period period-departure">
 									<div class="filter__period-control">
-										<img src="../icons/Subtract (1).svg" />
+										<img src="../assets/icons/Subtract (1).svg" />
 										<p class="filter__period-title">Туда</p>
-										<img src="../icons/Group 11.2 (1).svg" />
+										<img src="../assets/icons/Group 11.2 (1).svg" />
 										
 									</div>
 								</div>
 								<div class="filter__period period-arrival">
 									<div class="filter__period-control">
-										<img src="../icons/Subtract (2).svg" />
+										<img src="../assets/icons/Subtract (2).svg" />
 										<p class="filter__period-title">Обратно</p>
-										<img src="../icons/Group 11.2 (1).svg" />
+										<img src="../assets/icons/Group 11.2 (1).svg" />
 
 									</div>
 								</div>
@@ -218,7 +220,7 @@ const VabortrainMain = () => {
 
 										</div>
 										<div class="ticket-item__options">
-											<img src="../icons/Group 2.2.svg" />
+											<img src="../assets/icons/Group 2.2.svg" />
 											<div class="ticket-item__option">
 
 											</div>
@@ -237,7 +239,7 @@ const VabortrainMain = () => {
 											<p class="ticket-item__to_railway">Казань</p>
 										</div>
 										<div class="ticket-item__options">
-											<img src="../icons/Group 2.2.svg" />
+											<img src="../assets/icons/Group 2.2.svg" />
 											<div class="ticket-item__option">
 											</div>
 
@@ -256,7 +258,7 @@ const VabortrainMain = () => {
 											<p class="ticket-item__to_railway">Аткарск</p>
 										</div>
 										<div class="ticket-item__options">
-											<img src="../icons/Group 2.2.svg" />
+											<img src="../assets/icons/Group 2.2.svg" />
 											<div class="ticket-item__option">
 											</div>
 
@@ -275,7 +277,7 @@ const VabortrainMain = () => {
 											<p class="ticket-item__to_railway">Анапа</p>
 										</div>
 										<div class="ticket-item__options">
-											<img src="../icons/Group 2.2.svg" />
+											<img src="../assets/icons/Group 2.2.svg" />
 											<div class="ticket-item__option">
 											</div>
 										</div>
@@ -293,7 +295,7 @@ const VabortrainMain = () => {
 											<p class="ticket-item__to_railway">Агрыз</p>
 										</div>
 										<div class="ticket-item__options">
-											<img src="../icons/Group 2.2.svg" />
+											<img src="../assets/icons/Group 2.2.svg" />
 											<div class="ticket-item__option">
 											</div>
 										</div>
@@ -332,188 +334,15 @@ const VabortrainMain = () => {
 							</div>
 
 							<div class="train-list">
-								<div class="number-train-selection">
-									<div class="train-route">
-										<div class="train-name">
-											<span class="train-name-image"><img src="../icons/trainlight.svg"
-													alt="" /></span>
-											<h1 class="train-number">116C</h1>
-											<div class="train-name-selection">
-												<p class="train-name-city">Москва →</p>
-												<p class="train-name-city">Санкт-Петербург</p>
-											</div>
-										</div>
+								
+							{TrainList.map( (train) =>(
 
-										<div class="train-selection">
-											<div class="train-selection-route">
-												<div class="train-selection-from">
-													<div class="selection-time">09:13</div>
-													<div class="selection-from">
-														<h1 class="selection-city">Москва</h1>
-														<p class="selection-station">Ленинградский вокзал</p>
-													</div>
+								<TrainCardSelection key={train.id} train={train} />
 
-													<div class="selection-time">00:13</div>
-													<div class="selection-from">
-														<h1 class="selection-city">Cанкт-Петербург</h1>
-														<p class="selection-station">Московский вокзал</p>
-													</div>
-												</div>
-												<div class="train__selection-time">
-													<p class="travel__time">08:32</p>
-													<span class="selection__arrow"></span>
+							))}
+								
+							
 
-													<p class="travel__time travel__time-2line">08:38</p>
-													<span class="selection__arrow selection__arrow-rotate"></span>
-												</div>
-												<div class="train-selection-to">
-													<div class="selection-time">09:13</div>
-													<div class="direction__to">
-														<h1 class="direction-city">Москва</h1>
-														<p class="direction-station">Ленинградский вокзал</p>
-													</div>
-
-													<div class="selection-time">09:13</div>
-													<div class="direction__to">
-														<h1 class="direction-city">Москва</h1>
-														<p class="direction-station">Ленинградский вокзал</p>
-													</div>
-												</div>
-
-												<div class="train__tickets">
-													<div class="ticket-options">
-														<span class="ticket-options_class">Плацкарт</span>
-														<span class="ticket-options_amount">22</span>
-														<span class="ticket-options_price">
-															<span>от</span>
-															<span class="ticket-options_price_number">3 805</span>
-															<span class="ticket-options_price_rub">₽</span>
-														</span>
-
-														<span class="ticket-options_class">Сидячий</span>
-														<span class="ticket-options_amount">02</span>
-														<span class="ticket-options_price">
-															<span>от</span>
-															<span class="ticket-options_price_number">3 805</span>
-															<span class="ticket-options_price_rub">₽</span>
-														</span>
-
-														<span class="ticket-options_class">Купе</span>
-														<span class="ticket-options_amount">48</span>
-														<span class="ticket-options_price">
-															<span>от</span>
-															<span class="ticket-options_price_number">3 805</span>
-															<span class="ticket-options_price_rub">₽</span>
-														</span>
-
-														<span class="ticket-options_class">Люкс</span>
-														<span class="ticket-options_amount">25</span>
-														<span class="ticket-options_price">
-															<span>от</span>
-															<span class="ticket-options_price_number">3 805</span>
-															<span class="ticket-options_price_rub">₽</span>
-														</span>
-													</div>
-
-
-													<div class="train__facilities">
-														<span class="train__facilities-wifi"></span>
-														<span class="train__facilities-express"></span>
-														<span class="facilities__coffee-have"></span>
-													</div>
-													<button type="button" class="train__choice-btn">Выбрать
-														места</button>
-
-												</div>
-
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="number-train-selection">
-									<div class="train-route">
-										<div class="train-name">
-											<span class="train-name-image"><img src="../icons/trainlight.svg"
-													alt="" /></span>
-											<h1 class="train-number">020У</h1>
-											<div class="train-name-selection">
-												<p class="train-name-city">Москва →</p>
-												<p class="train-name-city">Санкт-Петербург "Мегаполис"</p>
-											</div>
-										</div>
-
-										<div class="train-selection">
-											<div class="train-selection-route">
-												<div class="train-selection-from">
-													<div class="selection-time">00:20</div>
-													<div class="selection-from">
-														<h1 class="selection-city">Москва</h1>
-														<p class="selection-station">Ленинградский вокзал</p>
-													</div>
-												</div>
-												<div class="train__selection-time">
-													<p class="travel__time">08:39</p>
-													<span class="selection__arrow"></span>
-												</div>
-												<div class="train-selection-to">
-													<div class="selection-time">09:59</div>
-													<div class="direction__to">
-														<h1 class="direction-city">Cанкт-Петербург</h1>
-														<p class="direction-station">Московский вокзал</p>
-													</div>
-												</div>
-
-												<div class="train__tickets">
-
-													<div class="ticket-options">
-														<span class="ticket-options_class">Плацкарт</span>
-														<span class="ticket-options_amount">48</span>
-														<span class="ticket-options_price">
-															<span>от</span>
-															<span class="ticket-options_price_number">3 805</span>
-															<span class="ticket-options_price_rub">₽</span>
-														</span>
-
-														<span class="ticket-options_class">Сидячий</span>
-														<span class="ticket-options_amount">48</span>
-														<span class="ticket-options_price">
-															<span>от</span>
-															<span class="ticket-options_price_number">3 805</span>
-															<span class="ticket-options_price_rub">₽</span>
-														</span>
-
-														<span class="ticket-options_class">Купе</span>
-														<span class="ticket-options_amount">48</span>
-														<span class="ticket-options_price">
-															<span>от</span>
-															<span class="ticket-options_price_number">3 805</span>
-															<span class="ticket-options_price_rub">₽</span>
-														</span>
-
-														<span class="ticket-options_class">Люкс</span>
-														<span class="ticket-options_amount">48</span>
-														<span class="ticket-options_price">
-															<span>от</span>
-															<span class="ticket-options_price_number">3 805</span>
-															<span class="ticket-options_price_rub">₽</span>
-														</span>
-													</div>
-
-
-
-													<div class="train__facilities">
-														<span class="train__facilities-wifi"></span>
-														<span class="train__facilities-express"></span>
-														<span class="facilities__coffee-have"></span>
-													</div>
-													<button type="button" class="train__choice-btn">Выбрать
-														места</button>
-
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 							</div>
 	
 							<div class="order-results__wrapper">

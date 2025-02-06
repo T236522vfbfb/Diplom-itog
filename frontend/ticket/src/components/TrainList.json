@@ -1,0 +1,90 @@
+{
+    "array": [
+        {
+            "id": "1",
+            
+            "train_number": "116C",
+            "train_city_from": "Москва",
+            "train_city_to": "Санкт-Петербург",
+
+            "train_from_time": "09:13",
+            "train_from_city": "Москва",
+            "train_from_station": "Ленинградский вокзал",
+            "train_travel_from_time": "08:32",
+
+            "train_to_time": "00:13",
+            "train_to_city": "Cанкт-Петербург",
+            "train_to_station": "Московский вокзал",
+            "train_travel_to_time": "08:32",
+
+            "train_from_time_2": "09:13",
+            "train_from_city_2": "Москва",
+            "train_from_station_2": "Ленинградский вокзал",
+            "train_travel_from_time_2": "08:32",
+
+            "train_to_time_2": "09:13",
+            "train_to_city_2": "Cанкт-Петербург",
+            "train_to_station_2": "Московский вокзал",
+            "train_travel_to_time_2": "08:32",
+
+            "ticket_options_class_1": "Плацкарт",
+            "ticket_options_amount_1": "22",
+            "ticket_options_price_1": "3 805",
+
+            "ticket_options_class_2": "Сидячий",
+            "ticket_options_amount_2": "02",
+            "ticket_options_price_2": "3 805",
+
+            "ticket_options_class_3": "Купе",
+            "ticket_options_amount_3": "48",
+            "ticket_options_price_3": "3 805",
+
+            "ticket_options_class_4": "Люкс",
+            "ticket_options_amount_4": "25",
+            "ticket_options_price_4": "3 805"
+        },
+        {
+            "id": "2",
+            
+            "train_number": "020У",
+            "train_city_from": "Москва",
+            "train_city_to": "Санкт-Петербург /'Мегаполис/'",
+
+            "train_from_time": "00:20",
+            "train_from_city": "Москва",
+            "train_from_station": "Ленинградский вокзал",
+            "train_travel_from_time": "08:32",
+
+            "train_to_time": "09:59",
+            "train_to_city": "Cанкт-Петербург",
+            "train_to_station": "Московский вокзал",
+            "train_travel_to_time": "08:32",
+
+            "train_from_time_2": "09:13",
+            "train_from_city_2": "Москва",
+            "train_from_station_2": "Ленинградский вокзал",
+            "train_travel_from_time_2": "08:32",
+
+            "train_to_time_2": "09:13",
+            "train_to_city_2": "Cанкт-Петербург",
+            "train_to_station_2": "Московский вокзал",
+            "train_travel_to_time_2": "08:32",
+
+            "ticket_options_class_1": "Плацкарт",
+            "ticket_options_amount_1": "48",
+            "ticket_options_price_1": "3 805",
+
+            "ticket_options_class_2": "Сидячий",
+            "ticket_options_amount_2": "48",
+            "ticket_options_price_2": "3 805",
+
+            "ticket_options_class_3": "Купе",
+            "ticket_options_amount_3": "48",
+            "ticket_options_price_3": "3 805",
+            
+            "ticket_options_class_4": "Люкс",
+            "ticket_options_amount_4": "48",
+            "ticket_options_price_4": "3 805"
+        }
+    ]
+}

@@ -1,13 +1,12 @@
-import IndexPage from './pages/indexPage';
-import VabortrainPage from './pages/vabortrainPage';
-
+// import IndexPage from './pages/indexPage';
+import VabortrainPage from "./pages/vabortrainPage";
 
 const App = () => {
-  return (
-    <>
-      <VabortrainPage /> 
-    </>
-  )
-}
+	return (
+		<>
+			<VabortrainPage />
+		</>
+	);
+};
 
-export default App
+export default App;
