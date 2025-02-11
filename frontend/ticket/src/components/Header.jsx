@@ -1,8 +1,10 @@
 import HeaderNav from './HeaderNav';
 
+console.log("HeaderIndex component is rendering");
+
 const HeaderIndex = () => {
 	return (
-		<section cclassName="arial">
+		<section className="arial">
 			<header className="header-train">
 			
 			<HeaderNav />
