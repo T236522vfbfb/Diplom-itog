@@ -19,7 +19,7 @@ const HeaderIndex = () => {
 						<div>
 							<fieldset className="form_fieldset fieldset-direction">
 								<div>
-									<label for="search-to" className="form_fieldset__header">
+									<label htmlFor="search-to" className="form_fieldset__header">
 										Направление
 									</label>
 								</div>
@@ -49,7 +49,7 @@ const HeaderIndex = () => {
 					</div>
 					<div className="colums departure-date">
 						<div>
-							<label for="search-date-from" className="date-lable">
+							<label htmlFor="search-date-from" className="date-lable">
 								Дата
 							</label>
 							<input

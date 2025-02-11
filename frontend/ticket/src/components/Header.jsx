@@ -2,28 +2,28 @@ import HeaderNav from './HeaderNav';
 
 const HeaderIndex = () => {
 	return (
-		<section class="arial">
-			<header class="header-train">
+		<section cclassNameName="arial">
+			<header classNameName="header-train">
 			
 			<HeaderNav />
 
-			<div class="search-widget">
-				<form class="MainSearch-widget">
-					<fieldset class="direction">
-						<legend class="fieldset-legend">Направление</legend>
+			<div classNameName="search-widget">
+				<form classNameName="MainSearch-widget">
+					<fieldset classNameName="direction">
+						<legend classNameName="fieldset-legend">Направление</legend>
 
-						<div class="fieldset__input-wrapper">
-							<label class="fieldset__label">
+						<div className="fieldset__input-wrapper">
+							<label className="fieldset__label">
 							</label>
 							<div>
-								<div class="ant-select-selector">
-									<span class="ant-select-selection-search">
+								<div className="ant-select-selector">
+									<span className="ant-select-selection-search">
 										<input placeholder="Москва" type="search" autocomplete="off"
-											class="ant-select-selection-search-input" id="rc_select_2" />
+											className="ant-select-selection-search-input" id="rc_select_2" />
 									</span>
 								</div>
 
-								<div class="city-list">
+								<div className="city-list">
 									<ul>
 										<li>Москва</li>
 									</ul>
@@ -32,22 +32,22 @@ const HeaderIndex = () => {
 							</div>
 						</div>
 
-						<div class="fieldset__btn">
-							<button class="fieldset-direction__btn" type="button"></button>
+						<div className="fieldset__btn">
+							<button className="fieldset-direction__btn" type="button"></button>
 						</div>
 
-						<div class="fieldset__input-wrapper">
-							<label for="to" class="fieldset__label">
+						<div className="fieldset__input-wrapper">
+							<label for="to" className="fieldset__label">
 							</label>
-							<div class="">
-								<div class="ant-select-selector">
-									<span class="ant-select-selection-search">
+							<div className="">
+								<div className="ant-select-selector">
+									<span className="ant-select-selection-search">
 										<input type="search" autocomplete="off"
-											class="ant-select-selection-search-input" />
+											className="ant-select-selection-search-input" />
 									</span>
 								</div>
 
-								<div class="city-list">
+								<div className="city-list">
 									<ul>
 										<li>Москва</li>
 										<li>САНКТ-ПЕТЕРБУРГ</li>
@@ -58,34 +58,34 @@ const HeaderIndex = () => {
 						</div>
 					</fieldset>
 
-					<fieldset class="fieldset-date">
-						<legend class="fieldset-legend">Дата</legend>
-						<div class="fieldset__input-wrapper">
-							<label class="fieldset__label"></label>
+					<fieldset className="fieldset-date">
+						<legend className="fieldset-legend">Дата</legend>
+						<div className="fieldset__input-wrapper">
+							<label className="fieldset__label"></label>
 							<input placeholder="2024-12-28"
-								class="ant-select-selection-search-input fieldset__input-calendar" required="" />
+								className="ant-select-selection-search-input fieldset__input-calendar" required="" />
 						</div>
-						<div class="fieldset__input-wrapper">
-							<label class="fieldset__label"></label>
+						<div className="fieldset__input-wrapper">
+							<label className="fieldset__label"></label>
 							<input placeholder="ДД/ММ/ГГ"
-								class="ant-select-selection-search-input fieldset__input-calendar" required="" />
+								className="ant-select-selection-search-input fieldset__input-calendar" required="" />
 						</div>
 					</fieldset>
 				</form>
 
-				<div class="form__btn">
-					<button class="form__btn-send" type="button">Найти билеты</button>
+				<div className="form__btn">
+					<button className="form__btn-send" type="button">Найти билеты</button>
 				</div>
 
-				<div class="modal__wrapper" style="display: none;">
-					<div class="modal__container">
-						<div class="modal__header modal__header-info">
+				<div className="modal__wrapper" style="display: none;">
+					<div className="modal__container">
+						<div className="modal__header modal__header-info">
 						</div>
-						<div class="modal__content">
-							<p class="modal__title">Информационное сообщение</p>
-							<p class="modal__text">Поля "Откуда" и "Куда" обязательны для заполнения</p>
+						<div className="modal__content">
+							<p className="modal__title">Информационное сообщение</p>
+							<p className="modal__text">Поля "Откуда" и "Куда" обязательны для заполнения</p>
 						</div>
-						<div class="modal__footer"><button class="modal__btn" type="button">Понятно</button>
+						<div className="modal__footer"><button className="modal__btn" type="button">Понятно</button>
 						</div>
 					</div>
 				</div>
