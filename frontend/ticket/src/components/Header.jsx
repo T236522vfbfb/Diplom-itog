@@ -2,15 +2,15 @@ import HeaderNav from './HeaderNav';
 
 const HeaderIndex = () => {
 	return (
-		<section cclassNameName="arial">
-			<header classNameName="header-train">
+		<section cclassName="arial">
+			<header className="header-train">
 			
 			<HeaderNav />
 
-			<div classNameName="search-widget">
-				<form classNameName="MainSearch-widget">
-					<fieldset classNameName="direction">
-						<legend classNameName="fieldset-legend">Направление</legend>
+			<div className="search-widget">
+				<form className="MainSearch-widget">
+					<fieldset className="direction">
+						<legend className="fieldset-legend">Направление</legend>
 
 						<div className="fieldset__input-wrapper">
 							<label className="fieldset__label">
